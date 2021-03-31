@@ -1,16 +1,26 @@
 import React from "react";
+import Topic from "../components/Topic";
 
 interface Props {
   title: string;
   description: string;
+  textCentered: boolean;
 }
-const Heading = ({ title, description }: Props) => {
+
+const Heading = ({ title, description, textCentered }: Props) => {
   return (
     <>
-      <p className="block mb-2 text-base text-3xl font-bold leading-tight md:text-4xl">
-        {title}
-      </p>
-      <p className="block pr-16 mb-2 text-lg md:text-xl">{description}</p>
+      <div className="w-full md:flex">
+        <div className="md:w-2/6"></div>
+        <div className="justify-center md:w-2/6">
+          <Topic
+            title={title}
+            description={description}
+            textCentered={textCentered}
+          ></Topic>
+        </div>
+        <div className="md:w-2/6"></div>
+      </div>
     </>
   );
 };
