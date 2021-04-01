@@ -42,21 +42,25 @@ const Navbar = () => {
             <Link href="/">
               <a>
                 {" "}
-                <img src={"/logo.svg"} alt="Ladder Designs logo" width="300" />
+                <img
+                  src={"/logo.svg"}
+                  alt="Ladder Designs logo"
+                  className="w-64"
+                />
               </a>
             </Link>
           </div>
           <div className="flex items-center justify-center flex-1 md:items-stretch md:justify-end">
-            <div className="hidden md:block md:ml-6">
+            <div className="hidden md:block md:ml-2">
               <div className="flex">
-                <div className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+                <div className="px-4 py-2 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
                   <Link href="about">ABOUT US</Link>
                 </div>
                 <div className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
                   <Link href="ourwork">OUR WORK</Link>
                 </div>{" "}
                 <Link href="contact">
-                  <a className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:bg-gray-100 focus:bg-gray-100">
+                  <a className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:bg-opacity-75">
                     {" "}
                     CONTACT US
                   </a>
@@ -75,7 +79,7 @@ const Navbar = () => {
             {" "}
             <Link href="blog">OUR WORK</Link>
           </div>
-          <div className="block px-4 py-2 mt-1 text-base font-medium text-orange-800 transition duration-150 ease-in-out bg-white rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100">
+          <div className="block px-4 py-2 mt-1 text-base font-medium text-orange-800 transition duration-150 ease-in-out bg-white rounded-lg hover:opacity-75 focus:outline-none focus:opacity-75">
             <Link href="donate">CONTACT US</Link>
           </div>
         </div>
