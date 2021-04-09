@@ -11,7 +11,7 @@ const Topic = ({ title, description, textCentered }: Props) => {
     <>
       <p
         className={
-          "block mb-2 text-base text-3xl font-bold leading-tight md:text-4xl " +
+          "block mb-2 text-2xl font-bold leading-tight md:text-3xl lg:text-4xl " +
           (textCentered ? "text-center" : "text-left")
         }
       >
@@ -19,7 +19,7 @@ const Topic = ({ title, description, textCentered }: Props) => {
       </p>
       <p
         className={
-          "block mb-2 text-lg md:text-xl " +
+          "block mb-2 text-xl md:text-2xl " +
           (textCentered ? "text-center" : "text-left")
         }
       >

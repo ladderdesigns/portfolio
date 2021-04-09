@@ -4,6 +4,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        108: '27rem',
+        120: '30rem',
+        132: '33rem',
+       },
       transitionProperty: {
         'width': 'width'
       },
@@ -22,14 +27,17 @@ module.exports = {
            700: "#99543D",
            800: "#663828",
            900: "#331C14"
-         }
-       }
+         },
+       },
     }
   },
   variants: {
     extend: {
       height: ['responsive', 'hover', 'focus']
     },
+    spacing: {
+      '192': '4rem',
+    }
   },
   plugins: [],
 }

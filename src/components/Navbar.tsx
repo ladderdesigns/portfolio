@@ -2,18 +2,22 @@ import React, { useState } from "react";
 
 import Link from "next/link";
 
-const Navbar = () => {
+interface Props {
+  isIndex: boolean;
+}
+
+const Navbar = ({ isIndex }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <nav className="bg-transparent ">
+    <nav className={"bg-champagne " + (isIndex ? "rounded-md" : "")}>
       <div className="px-2 mx-auto max-w-7xl md:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
             <button
               onClick={toggle}
-              className="inline-flex items-center justify-center p-2 text-base transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-orange-800 focus:outline-none focus:bg-green-800 focus:text-white"
+              className="inline-flex items-center justify-center p-2 text-base transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-orange-800 focus:outline-none focus:bg-orange-800 focus:text-white"
             >
               <svg
                 className="w-6 h-6"
@@ -45,7 +49,12 @@ const Navbar = () => {
                 <img
                   src={"/landing-logo.svg"}
                   alt="Ladder Designs logo"
-                  className="w-64"
+                  className="hidden w-64 sm:block"
+                />
+                <img
+                  src={"/landing-logo-mobile.svg"}
+                  alt="Ladder Designs logo"
+                  className="block ml-2 w-28 sm:hidden"
                 />
               </a>
             </Link>
@@ -57,7 +66,7 @@ const Navbar = () => {
                   <Link href="about">ABOUT US</Link>
                 </div>
                 <div className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
-                  <Link href="ourwork">OUR WORK</Link>
+                  <Link href="our-work">OUR WORK</Link>
                 </div>{" "}
                 <Link href="contact">
                   <a className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:bg-opacity-75">
@@ -72,20 +81,24 @@ const Navbar = () => {
       </div>
       <div className={isOpen ? "block" : "hidden"}>
         <div className="px-2 pt-2 pb-3">
-          <div className="block px-4 py-2 mt-1 text-base font-medium text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+          <div className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
             <Link href="about">ABOUT US</Link>
           </div>
-          <div className="block px-4 py-2 mt-1 text-base font-medium text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+          <div className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
             {" "}
             <Link href="blog">OUR WORK</Link>
           </div>
-          <div className="block px-4 py-2 mt-1 text-base font-medium text-orange-800 transition duration-150 ease-in-out bg-white rounded-lg hover:opacity-75 focus:outline-none focus:opacity-75">
+          <div className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out bg-white rounded-lg hover:opacity-75 focus:outline-none focus:opacity-75">
             <Link href="donate">CONTACT US</Link>
           </div>
         </div>
       </div>
     </nav>
   );
+};
+
+Navbar.defaultProps = {
+  isIndex: false,
 };
 
 export default Navbar;
