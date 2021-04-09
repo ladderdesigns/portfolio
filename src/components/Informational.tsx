@@ -5,7 +5,7 @@ interface Props {
   invert: boolean;
   text: string;
 }
-//{ text, isTitle, url }: Props
+
 const Informational = ({ title, invert, text }: Props) => {
   return (
     <div

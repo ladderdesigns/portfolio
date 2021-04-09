@@ -10,7 +10,7 @@ interface Props {
 const Heading = ({ title, description, textCentered }: Props) => {
   return (
     <>
-      <div className="w-full md:flex">
+      <div className="flex flex-row w-full px-8 text-base text-orange-800 bg-champagne">
         <div className="md:w-2/6"></div>
         <div className="justify-center md:w-2/6">
           <Topic
