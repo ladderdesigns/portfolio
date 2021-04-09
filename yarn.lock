@@ -371,6 +371,11 @@
   "resolved" "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.1.1.tgz"
   "version" "9.1.1"
 
+"@headlessui/react@^0.3.1":
+  "integrity" "sha512-GnAVXCLmDs3CFvmvYo4Iu/LqAWVIoS+bGo+eMADnbWgF8BeMX13sWMyb8eOdj7N9nqY9QA2AsMzqYdAIbbsRIw=="
+  "resolved" "https://registry.npmjs.org/@headlessui/react/-/react-0.3.1.tgz"
+  "version" "0.3.1"
+
 "@next/env@10.0.6":
   "integrity" "sha512-++zgrcSL9SprjWKBbO3YuVj/8CTmxJl+zLErW/Kbr2VCT0u12SrBcMKvD236lEGs5/qUgeBfU3Dvmr6MASWrtA=="
   "resolved" "https://registry.npmjs.org/@next/env/-/env-10.0.6.tgz"
@@ -4706,7 +4711,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
-"react@^16.6.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.1":
+"react@^16.6.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@>=16", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"

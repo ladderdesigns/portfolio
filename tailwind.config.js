@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      transitionProperty: {
+        'width': 'width'
+      },
       fontFamily: {
         'base': ['Roboto']
        },
@@ -24,7 +27,9 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    extend: {
+      height: ['responsive', 'hover', 'focus']
+    },
   },
   plugins: [],
 }

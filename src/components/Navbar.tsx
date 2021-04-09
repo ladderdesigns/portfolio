@@ -43,7 +43,7 @@ const Navbar = () => {
               <a>
                 {" "}
                 <img
-                  src={"/logo.svg"}
+                  src={"/landing-logo.svg"}
                   alt="Ladder Designs logo"
                   className="w-64"
                 />
