@@ -35,9 +35,7 @@ module.exports = {
     extend: {
       height: ['responsive', 'hover', 'focus']
     },
-    spacing: {
-      '192': '4rem',
-    }
   },
-  plugins: [],
+  plugins: [
+  ],
 }

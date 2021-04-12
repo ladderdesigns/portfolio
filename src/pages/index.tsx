@@ -37,15 +37,16 @@ export default function Index() {
 
         <div className="flex flex-row justify-center w-full h-screen text-base text-orange-800">
           <div className="hidden w-1/6 lg:block"></div>
-          <div className="relative flex-col px-8 mt-8 lg:px-0 lg:flex-row lg:w-2/6 sm:mt-20 md:mt-28 lg:mt-36">
+          <div className="relative flex-col px-8 mt-16 lg:px-0 lg:flex-row lg:w-2/6 sm:mt-20 md:mt-28 lg:mt-36">
             <Topic
               title="We build high quality education technology, so you don’t have
                   to."
               description="Affordable, accessible website design by people who care."
               textCentered={false}
             ></Topic>
-
-            <Button text="CONTACT US" isTitle={false} url="/contact" />
+            <div className="flex">
+              <Button text="CONTACT US" isTitle={false} url="/contact" />
+            </div>
 
             <img
               src={"/learner.svg"}
@@ -68,7 +69,9 @@ export default function Index() {
       <section>
         <div className="flex flex-col w-full h-screen px-8 pt-8 text-base text-orange-800 md:px-0 md:flex-row bg-champagne">
           <div className="hidden w-1/6 md:flex"></div>
-          <div className="flex-col w-100 md:p-0 md:w-2/6 md:mt-6 lg:mt-12"></div>
+          <div className="flex-col realtive w-100 md:p-0 md:w-2/6 md:mt-6 lg:mt-12">
+            <img className="absolute left-0 w-108" src={"/devices.svg"}></img>
+          </div>
           <div className="flex-col self-center w-100 md:p-0 md:w-2/6 md:mt-6 lg:mt-12">
             <Topic
               title="Technology the right way"
@@ -91,10 +94,10 @@ export default function Index() {
           description="We’re young professionals that grew up with the Internet, so we know what makes a good website."
           textCentered={true}
         ></Heading>
-        <div className="flex flex-col w-full h-screen px-8 pt-8 md:px-0 md:flex-row bg-champagne ">
+        <div className="flex flex-col w-full h-screen px-8 pt-8 md:px-0 md:flex-row bg-champagne">
           <div className="hidden md:block md:w-1/6"></div>
           <div className="my-auto md:self-center md:w-4/6">
-            <div className="grid w-full h-auto grid-flow-row grid-cols-1 grid-rows-3 gap-8 md:grid-rows-1 md:grid-flow-col md:grid-cols-3 md:min-h-120">
+            <div className="grid w-full h-auto grid-flow-row grid-cols-1 grid-rows-3 gap-8 lg:grid-rows-1 lg:grid-flow-col lg:grid-cols-3 lg:min-h-120">
               <div className="p-4 bg-orange-500 rounded-xl">
                 {" "}
                 <p className="text-2xl font-semibold text-white ">
@@ -160,7 +163,6 @@ export default function Index() {
               </div>
             </div>
           </div>
-
           <div className="hidden md:block md:w-1/6"></div>
         </div>
       </section>
@@ -168,69 +170,72 @@ export default function Index() {
       <Squiggly></Squiggly>
 
       <section>
-        <Heading
-          title="What our clients say"
-          description="We love hearing from our clients whether learners themselves or educators helping others learn."
-          textCentered={true}
-        ></Heading>
-        <div className="flex flex-col w-full h-screen pt-8 md:flex-row">
-          <div className="hidden w-1/6 md:flex"></div>
-          <div className="flex-col justify-center w-full md:p-0 lg:w-2/6 md:mt-6 lg:mt-12">
-            <div className="mt-4"></div>
+        <div className="flex flex-col w-full bg-champagne">
+          <Heading
+            title="What our clients say"
+            description="We love hearing from our clients whether learners themselves or educators helping others learn."
+            textCentered={true}
+          ></Heading>
+          <div className="flex flex-row w-full h-screen pt-8">
+            <div className="hidden w-1/6 lg:flex"></div>
+            <div className="flex flex-col self-center w-full mx-auto lg:w-4/6 lg:flex-row ">
+              <div className="flex flex-col self-center mb-16 w-72 lg:w-108 lg:mb-0">
+                <Testimonial
+                  name={testimonialOne.name}
+                  title={testimonialOne.title}
+                  image={testimonialOne.image}
+                  isOpen={currTestimonial.id === testimonialOne.id}
+                  callback={() => {
+                    setCurrTestimonial(testimonialOne);
+                  }}
+                ></Testimonial>
+                <div className="mt-4"></div>
+                <Testimonial
+                  name={testimonialTwo.name}
+                  title={testimonialTwo.title}
+                  image={testimonialTwo.image}
+                  isOpen={currTestimonial.id === testimonialTwo.id}
+                  callback={() => setCurrTestimonial(testimonialTwo)}
+                ></Testimonial>
+                <div className="mt-4"></div>
+                <Testimonial
+                  name={testimonialThree.name}
+                  title={testimonialThree.title}
+                  image={testimonialThree.image}
+                  isOpen={currTestimonial.id === testimonialThree.id}
+                  callback={() => setCurrTestimonial(testimonialThree)}
+                ></Testimonial>
+              </div>
 
-            <Testimonial
-              name={testimonialOne.name}
-              title={testimonialOne.title}
-              image={testimonialOne.image}
-              isOpen={currTestimonial.id === testimonialOne.id}
-              callback={() => {
-                setCurrTestimonial(testimonialOne);
-                console.log("hello");
-              }}
-            ></Testimonial>
-            <div className="mt-4"></div>
-            <Testimonial
-              name={testimonialTwo.name}
-              title={testimonialTwo.title}
-              image={testimonialTwo.image}
-              isOpen={currTestimonial.id === testimonialTwo.id}
-              callback={() => setCurrTestimonial(testimonialTwo)}
-            ></Testimonial>
-            <div className="mt-4"></div>
-            <Testimonial
-              name={testimonialThree.name}
-              title={testimonialThree.title}
-              image={testimonialThree.image}
-              isOpen={currTestimonial.id === testimonialThree.id}
-              callback={() => setCurrTestimonial(testimonialThree)}
-            ></Testimonial>
+              <div className="flex-col self-center px-10 text-xl text-center text-orange-800 md:px-16 lg:w-108">
+                <p className="text-xl italic">"{currTestimonial.quote}"</p>
+                <p className="mt-6 text-lg italic font-semibold">
+                  {currTestimonial.name}
+                </p>
+                <p className="text-sm italic">{currTestimonial.group}</p>
+              </div>
+            </div>
+            <div className="hidden w-1/6 lg:flex"></div>
           </div>
-          <div className="flex-col mt-8 text-xl text-center w-100 md:mt-0 md:p-0 md:w-2/6 md:mt-6 lg:mt-12">
-            <p className="text-xl italic">"{currTestimonial.quote}"</p>
-            <p className="mt-6 text-lg italic font-semibold">
-              {currTestimonial.name}
-            </p>
-            <p className="text-sm italic">{currTestimonial.group}</p>
-          </div>
-
-          <div className="hidden w-1/6 md:flex"></div>
         </div>
       </section>
-      <div className="self-center justify-end ">
-        <Squiggly></Squiggly>
-      </div>
+
+      <Squiggly></Squiggly>
+
       <section>
-        <Heading
-          title="Get in touch!"
-          description="Contact us so we can learn more about your project and get you a quote."
-          textCentered={true}
-        ></Heading>
-        <div className="flex flex-col w-full h-screen pt-8 md:flex-row">
-          <div className="hidden w-1/6 md:flex"></div>
-          <div className="flex-col self-center w-100 md:p-0 md:w-4/6 md:mt-6 lg:mt-12">
-            <ContactFrom></ContactFrom>
+        <div className="flex flex-col w-full pb-16 bg-champagne">
+          <Heading
+            title="Get in touch!"
+            description="Contact us so we can learn more about your project and get you a quote."
+            textCentered={true}
+          ></Heading>
+          <div className="flex flex-col w-full h-screen pt-8 md:flex-row">
+            <div className="hidden w-1/6 md:block"></div>
+            <div className="flex justify-center px-8 md:px-0 md:w-4/6 md:mt-6 lg:mt-12">
+              <ContactFrom></ContactFrom>
+            </div>
+            <div className="hidden w-1/6 md:block"></div>
           </div>
-          <div className="hidden w-1/6 md:flex"></div>
         </div>
       </section>
 

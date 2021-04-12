@@ -12,7 +12,7 @@ const Button = ({ text, isTitle, url }: Props) => {
     <a href={targetUrl}>
       <p
         className={
-          "px-4 py-2 w-32 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75" +
+          "px-4 py-2 text-sm text-center font-bold leading-5 text-orange-800 transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75" +
           (isTitle ? "text-sm md:text-lg" : "text-md")
         }
       >

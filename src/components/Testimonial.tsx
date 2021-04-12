@@ -13,7 +13,7 @@ const Testimonial = ({ name, title, image, isOpen, callback }: Props) => {
     <>
       <button
         className={
-          "flex flex-row h-24 px-4 py-2 text-white  rounded-2xl hover:opacity-75 transition transform duration-200 " +
+          "flex flex-row h-24 px-4 py-2 text-white items-center rounded-2xl hover:opacity-75 transition transform duration-200 " +
           (!isOpen
             ? "bg-white focus:w-80 w-72 transition-width rounded-lg"
             : "bg-orange-500 w-80 transition-width rounded-lg")
@@ -45,36 +45,5 @@ const Testimonial = ({ name, title, image, isOpen, callback }: Props) => {
     </>
   );
 };
-
-// {!isOpen && (
-//   <>
-// <div className="flex-col self-center w-3/5">
-//   <p className="text-xl font-bold text-left text-orange-500 ">
-//     {name}
-//   </p>
-//   <p className="font-normal text-left text-orange-400 text-md">
-//     {title}
-//   </p>
-// </div>
-// <div className="flex self-center justify-center w-2/5">
-//   <img src={image} alt="" className="w-16 h-16 rounded-full" />
-// </div>
-//   </>
-// )}
-// {isOpen && (
-//   <>
-//     <div className="flex-col self-center w-3/5">
-//       <p className="text-xl font-bold text-left text-white ">{name}</p>
-//       <p className="font-normal text-left text-orange-800 text-md">
-//         {title}
-//       </p>
-//     </div>
-//     <div className="flex self-center justify-between w-2/5">
-//       <img src={image} alt="" className="w-16 h-16 rounded-full" />
-
-//       {/* <img src={"/oval.svg"} className="h-16" /> */}
-//     </div>
-//   </>
-// )}
 
 export default Testimonial;
