@@ -62,13 +62,20 @@ const Navbar = ({ isIndex }: Props) => {
           <div className="flex items-center justify-center flex-1 md:items-stretch md:justify-end">
             <div className="hidden md:block md:ml-2">
               <div className="flex">
-                <div className="px-4 py-2 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
-                  <Link href="about">ABOUT US</Link>
-                </div>
-                <div className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
-                  <Link href="our-work">OUR WORK</Link>
-                </div>{" "}
-                <Link href="contact">
+                <Link href="about">
+                  <a className="px-4 py-2 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+                    ABOUT US
+                  </a>
+                </Link>
+
+                <Link href="our-work">
+                  <a className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+                    {" "}
+                    OUR WORK
+                  </a>
+                </Link>
+
+                <Link href="/#contact-us">
                   <a className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:bg-opacity-75">
                     {" "}
                     CONTACT US
@@ -81,16 +88,25 @@ const Navbar = ({ isIndex }: Props) => {
       </div>
       <div className={isOpen ? "block" : "hidden"}>
         <div className="px-2 pt-2 pb-3">
-          <div className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
-            <Link href="about">ABOUT US</Link>
-          </div>
-          <div className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
-            {" "}
-            <Link href="blog">OUR WORK</Link>
-          </div>
-          <div className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out bg-white rounded-lg hover:opacity-75 focus:outline-none focus:opacity-75">
-            <Link href="donate">CONTACT US</Link>
-          </div>
+          <Link href="about">
+            <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+              ABOUT US
+            </a>
+          </Link>
+
+          <Link href="blog">
+            <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+              {" "}
+              OUR WORK{" "}
+            </a>
+          </Link>
+
+          <Link href="/#contact-us">
+            <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out bg-white rounded-lg hover:opacity-75 focus:outline-none focus:opacity-75">
+              {" "}
+              CONTACT US
+            </a>
+          </Link>
         </div>
       </div>
     </nav>

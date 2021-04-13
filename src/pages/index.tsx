@@ -9,7 +9,6 @@ import Squiggly from "../components/Squiggly";
 import Testimonial from "../components/Testimonial";
 import ContactFrom from "../components/ContactForm";
 import Footer from "../components/Footer";
-import Informational from "../components/Informational";
 
 import testimonials from "../data/testimonials.json";
 
@@ -207,7 +206,7 @@ export default function Index() {
                 ></Testimonial>
               </div>
 
-              <div className="flex-col self-center px-10 text-xl text-center text-orange-800 md:px-16 lg:w-108">
+              <div className="flex flex-col justify-center px-10 text-xl text-center text-orange-800 lg:px-0 self-right lg:pl-20 lg:w-120">
                 <p className="text-xl italic">"{currTestimonial.quote}"</p>
                 <p className="mt-6 text-lg italic font-semibold">
                   {currTestimonial.name}
@@ -222,7 +221,7 @@ export default function Index() {
 
       <Squiggly></Squiggly>
 
-      <section>
+      <section id="contact-us">
         <div className="flex flex-col w-full pb-16 bg-champagne">
           <Heading
             title="Get in touch!"

@@ -23,13 +23,13 @@ export default function About() {
           <p className="text-2xl font-semibold text-center text-orange-800">
             Founder
           </p>
-          <p className="px-40 mt-4 text-xl text-center text-orange-800 ">
+          <p className="self-center px-4 mt-4 text-xl text-center text-orange-800 sm:w-4/5 md:w-3/5">
             Coding is my life, but learning is my love. That’s why I started
             Ladder Designs, a student-first design firm committed to creating
-            the highest quality software and education resources for schools and
-            educators. Whether it be online or in the classroom, I am commited
-            to creating effective tools so learners can achieve their highest
-            potentials.
+            the highest quality software and educational resources for schools
+            and teachers. Whether it be online or in the classroom, I am
+            commited to creating effective tools so learners can achieve their
+            highest potentials.
           </p>
         </div>
       </div>
