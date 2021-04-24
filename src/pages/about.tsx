@@ -33,6 +33,10 @@ export default function About() {
           </p>
         </div>
       </div>
+
+      <section className="h-screen bg-red-500">
+        <img src="science.png" className="object-cover w-full h-full"></img>
+      </section>
     </>
   );
 }

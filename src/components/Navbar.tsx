@@ -12,7 +12,7 @@ const Navbar = ({ isIndex }: Props) => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <nav className={"bg-champagne " + (isIndex ? "rounded-md" : "")}>
-      <div className="px-2 mx-auto max-w-7xl md:px-6 lg:px-8">
+      <div className="px-4 mx-auto">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
             <button

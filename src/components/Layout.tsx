@@ -9,7 +9,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <div className="px-10 pt-10 bg-champagne">
+      <div className="px-8 pt-8 bg-champagne">
         <Navbar></Navbar>
       </div>
 
