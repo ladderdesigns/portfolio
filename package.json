@@ -32,6 +32,8 @@
     ]
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@headlessui/react": "^0.3.1",
     "@tailwindcss/forms": "^0.3.2",
     "next": "10.0.6",
