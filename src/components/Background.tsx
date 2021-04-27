@@ -9,11 +9,15 @@ interface Props {
 }
 const Background = ({ image, height, width, children }: Props) => {
   return (
-    <div className="overflow-auto" id="bg" style={{
-      backgroundImage: `url(/${image})`,
-      backgroundRepeat: 'repeat',
-      backgroundSize: `${width}px ${height}px`
-    }}>
+    <div
+      className="overflow-auto"
+      id="bg"
+      style={{
+        backgroundImage: `url(/${image})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: `${width}px ${height}px`,
+      }}
+    >
       {children}
     </div>
   );
