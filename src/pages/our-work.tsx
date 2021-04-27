@@ -4,6 +4,7 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Topic from "../components/Topic";
 import Project from "../components/Project";
+import Background from "@/components/Background";
 
 export default function OurWork() {
   return (
@@ -30,25 +31,21 @@ export default function OurWork() {
         </div>
       </div>
 
-      <section
-        className="h-auto min-h-screen bg-red-500"
-        style={{
-          backgroundImage: `url(${"/science.png"})`,
-          backgroundSize: `95%`,
-        }}
-      >
-        <div className="flex flex-col justify-around h-auto min-h-screen bg-blue-500">
-          <div className="flex flex-col justify-center justify-between w-full h-auto lg:flex-row md:px-0">
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
+      <section className="w-full ">
+        <Background image="science.png" width={400} height={300}>
+          <div className="flex flex-col justify-around h-full py-8 space-y-8 overflow-x-hidden">
+            {/* Figure out why these items are not centering on mobile */}
+            <div className="flex flex-col self-center w-full px-4 space-y-8 lg:px-0 lg:space-y-0 lg:space-x-32 lg:w-max lg:flex-row">
+              <Project src="/maribel.png" url="https://maribel.io" />
+              <Project src="/maribel.png" url="https://maribel.io" />
+              <Project src="/maribel.png" url="https://maribel.io" />
+            </div>
+            <div className="flex flex-col self-center w-full px-4 space-y-8 lg:px-0 lg:space-y-0 lg:space-x-32 lg:w-max lg:flex-row">
+              <Project src="/maribel.png" url="https://maribel.io" />
+              <Project src="/maribel.png" url="https://maribel.io" />
+            </div>
           </div>
-          <div className="flex flex-col justify-center justify-between w-full h-auto lg:flex-row md:px-0">
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-          </div>
-        </div>
+        </Background>
       </section>
     </>
   );

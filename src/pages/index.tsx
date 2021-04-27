@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
 import Navbar from "../components/Navbar";
-import Button from "../components/Button";
 import Heading from "../components/Heading";
 import Topic from "../components/Topic";
 import Squiggly from "../components/Squiggly";
@@ -73,18 +72,35 @@ export default function Index() {
       </div> */}
       <section className="w-full">
         <Background image="science.png" width={400} height={300}>
-        <div className="m-4 bg-champagne rounded-xl">
+          <div className="m-4 bg-champagne rounded-xl">
             <Navbar isIndex={true}></Navbar>
             <div className="grid grid-cols-1 mt-8 md:grid-cols-2">
               <div className="flex items-center justify-center my-8 text-orange-800 md:justify-end">
-                <div className="w-full p-4 my-auto sm:w-4/5 md:w-3/4 md:pr-8 " id="landing-block">
-                  <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl"> We build high quality education technology, so you don’t have to. </h2>
-                  <h2 className="text-xl leading-tight lg:text-2xl xl:text-3xl"> Affordable, accessible website design by people who care. </h2>
-                  <button className="px-4 py-2 mt-2 text-sm font-bold leading-5 text-center text-orange-800 uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75"> Contact Us </button>
+                <div
+                  className="w-full p-4 my-auto sm:w-4/5 md:w-3/4 md:pr-8 "
+                  id="landing-block"
+                >
+                  <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl">
+                    {" "}
+                    We build high quality education technology, so you don’t
+                    have to.{" "}
+                  </h2>
+                  <h2 className="text-xl leading-tight lg:text-2xl xl:text-3xl">
+                    {" "}
+                    Affordable, accessible website design by people who care.{" "}
+                  </h2>
+                  <button className="px-4 py-2 mt-2 text-sm font-bold leading-5 text-center text-orange-800 uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
+                    {" "}
+                    Contact Us{" "}
+                  </button>
                 </div>
               </div>
               <div className="flex flex-col-reverse md:mt-8">
-                <img src={"/learner.svg"} alt="The website designer himself." className="w-3/5 mx-auto md:w-3/5 lg:w-3/5" />
+                <img
+                  src={"/learner.svg"}
+                  alt="The website designer himself."
+                  className="w-3/5 mx-auto md:w-3/5 lg:w-3/5"
+                />
               </div>
             </div>
           </div>
