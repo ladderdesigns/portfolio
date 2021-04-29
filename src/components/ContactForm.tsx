@@ -63,10 +63,9 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="flex flex-row justify-center">
-            <button
-              className="px-4 py-2 font-bold text-white bg-orange-500 rounded shadow hover:opacity-75 focus:shadow-outline focus:outline-none"
-              type="button"
-            >
+            {/* TODO: Make the button look better and rounded like the landing */}
+
+            <button className="px-4 py-2 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
               Send Message
             </button>
           </div>

@@ -34,13 +34,19 @@ export default function OurWork() {
       <section className="w-full ">
         <Background image="science.png" width={400} height={300}>
           <div className="flex flex-col justify-around h-full py-8 space-y-8 overflow-x-hidden">
-            {/* Figure out why these items are not centering on mobile */}
-            <div className="flex flex-col self-center w-full px-4 space-y-8 lg:px-0 lg:space-y-0 lg:space-x-32 lg:w-max lg:flex-row">
+            {/* TODO: Figure out why these items are not centering on mobile */}
+            <div className="flex flex-col self-center w-auto px-4 space-y-8 md:px-0 md:space-y-0 md:space-x-32 md:w-max md:flex-row">
               <Project src="/maribel.png" url="https://maribel.io" />
               <Project src="/maribel.png" url="https://maribel.io" />
               <Project src="/maribel.png" url="https://maribel.io" />
             </div>
-            <div className="flex flex-col self-center w-full px-4 space-y-8 lg:px-0 lg:space-y-0 lg:space-x-32 lg:w-max lg:flex-row">
+            <div className="flex flex-col self-center w-auto px-4 space-y-8 md:px-0 md:space-y-0 md:space-x-32 md:w-max md:ml-56 md:flex-row">
+              <Project src="/maribel.png" url="https://maribel.io" />
+              <Project src="/maribel.png" url="https://maribel.io" />
+              <Project src="/maribel.png" url="https://maribel.io" />
+            </div>
+            <div className="flex flex-col self-center w-auto px-4 space-y-8 md:px-0 md:space-y-0 md:space-x-32 md:w-max md:flex-row">
+              <Project src="/maribel.png" url="https://maribel.io" />
               <Project src="/maribel.png" url="https://maribel.io" />
               <Project src="/maribel.png" url="https://maribel.io" />
             </div>

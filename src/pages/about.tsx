@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import Person from "../components/Person";
 
-import Squiggly from "../components/Squiggly";
+import Background from "@/components/Background";
 
 export default function About() {
   return (
@@ -33,9 +34,14 @@ export default function About() {
           </p>
         </div>
       </div>
-
-      <section className="h-screen bg-red-500">
-        <img src="science.png" className="object-cover w-full h-full"></img>
+      <section className="w-full">
+        <Background image="science.png" width={400} height={300}>
+          <div className="flex flex-col items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8 lg:justify-center lg:flex-row">
+            <Person></Person>
+            <Person></Person>
+            <Person></Person>
+          </div>
+        </Background>
       </section>
     </>
   );
