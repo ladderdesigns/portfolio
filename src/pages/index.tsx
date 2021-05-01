@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Navbar from "../components/Navbar";
 import Heading from "../components/Heading";
-import Topic from "../components/Topic";
 import Squiggly from "../components/Squiggly";
 import Testimonial from "../components/Testimonial";
 import ContactFrom from "../components/ContactForm";
