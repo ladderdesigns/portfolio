@@ -1,0 +1,14 @@
+{
+  "sites": [
+    {
+      "key": "treetop-learning",
+      "url": "https://treetoplearning.org",
+      "img": "/treetop-learning.png"
+    },
+    {
+      "key": "maribel",
+      "url": "https://maribel.io",
+      "img": "/maribel.png"
+    }
+  ]
+}

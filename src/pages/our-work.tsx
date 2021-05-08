@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from "react";
+import projects from "../data/projects.json";
 import Head from "next/head";
+import { GetStaticProps } from "next";
 
-import Button from "../components/Button";
-import Topic from "../components/Topic";
 import Project from "../components/Project";
 import Background from "@/components/Background";
 import Link from "next/link";
 
-export default function OurWork() {
+interface ProjectObject {
+  [key: string]: string;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      projectsList: projects.sites,
+    },
+  };
+}
+
+export default function OurWork({ projectsList }) {
   return (
     <>
       <Head>
@@ -70,9 +82,9 @@ export default function OurWork() {
           <div className="flex flex-col justify-around h-full py-8 space-y-8 overflow-x-hidden">
             {/* TODO: Figure out why these items are not centering on mobile */}
             <div className="flex flex-col self-center w-auto px-4 space-y-8 md:px-0 md:space-y-0 md:space-x-32 md:w-max md:flex-row">
-              <Project src="/maribel.png" url="https://maribel.io" />
-              <Project src="/maribel.png" url="https://maribel.io" />
-              <Project src="/maribel.png" url="https://maribel.io" />
+              {projectsList.map((project) => (
+                <Project src={project.img} url={project} />
+              ))}
             </div>
             <div className="flex flex-col self-center w-auto px-4 space-y-8 md:px-0 md:space-y-0 md:space-x-32 md:w-max md:ml-56 md:flex-row">
               <Project src="/maribel.png" url="https://maribel.io" />
