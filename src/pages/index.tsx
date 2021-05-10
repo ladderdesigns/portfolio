@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
 import Navbar from "../components/Navbar";
+import Button from "../components/Button";
 import Heading from "../components/Heading";
+import Topic from "../components/Topic";
 import Squiggly from "../components/Squiggly";
 import Testimonial from "../components/Testimonial";
 import ContactFrom from "../components/ContactForm";
@@ -109,7 +111,7 @@ export default function Index() {
             what makes a good website.{" "}
           </h3>
         </div>
-        <div className="flex flex-row items-center justify-center">
+        <div className="flex flex-row items-center justify-center max-w-screen-lg">
           <Card
             title="Accessibility"
             text={[
@@ -126,7 +128,7 @@ export default function Index() {
               "It is long established fact that a reader will be distracted.",
               "It has survived not only five centuries, but also electronic typesetting.",
             ]}
-            type="primary"
+            type="secondary"
           />
           <Card
             title="Affordability"
@@ -137,85 +139,6 @@ export default function Index() {
             ]}
             type="primary"
           />
-        </div>
-      </section>
-
-      <section className="flex flex-col" id="what-we-value">
-        <Heading
-          title="Why us?"
-          description="We’re young professionals that grew up with the Internet, so we know what makes a good website."
-          textCentered={true}
-        ></Heading>
-        <div className="flex flex-col w-full h-screen px-8 pt-8md:px-0 md:flex-row bg-champagne">
-          <div className="hidden md:block md:w-1/6"></div>
-          <div className="my-auto md:self-center md:w-4/6">
-            <div className="grid w-full h-auto grid-flow-row grid-cols-1 grid-rows-3 gap-8 lg:grid-rows-1 lg:grid-flow-col lg:grid-cols-3 lg:min-h-120">
-              <div className="p-4 bg-orange-500 rounded-xl">
-                {" "}
-                <p className="text-2xl font-semibold text-white ">
-                  Accessibility
-                </p>
-                <img src={"little-squiggly.svg"} className="w-24 mt-1"></img>
-                <ul className="mt-2 font-semibold text-white list-disc list-inside text-md md:text-lg">
-                  <li>Lorem Ipsum is simply dummy text.</li>
-                  <li>
-                    {" "}
-                    It is long established fact that a reader will be
-                    distracted.
-                  </li>
-                  <li>
-                    It has survived not only five centuries, but also electronic
-                    typesetting.
-                  </li>
-                </ul>
-              </div>
-              <div className="p-4 bg-white border-2 border-orange-500 rounded-xl">
-                {" "}
-                <p className="text-2xl font-semibold text-orange-500 ">
-                  Creativity
-                </p>
-                <img
-                  src={"little-squiggly-orange.svg"}
-                  className="w-24 mt-1"
-                ></img>
-                <ul className="mt-2 font-semibold text-orange-500 list-disc list-inside text-md md:text-lg ">
-                  <li>Lorem Ipsum is simply dummy text.</li>
-                  <li>
-                    {" "}
-                    It is long established fact that a reader will be
-                    distracted.
-                  </li>
-                  <li>
-                    It has survived not only five centuries, but also electronic
-                    typesetting.
-                  </li>
-                </ul>
-              </div>
-              <div className="p-4 bg-orange-500 rounded-xl">
-                {" "}
-                <p className="text-2xl font-semibold text-white ">
-                  Affordability
-                </p>
-                <img
-                  src={"little-squiggly.svg"}
-                  className="w-24 mt-1 text-white"
-                ></img>
-                <ul className="mt-2 font-semibold text-white list-disc list-inside md:text-lg ">
-                  <li>Lorem Ipsum is simply dummy text.</li>
-                  <li>
-                    {" "}
-                    It is long established fact that a reader will be
-                    distracted.
-                  </li>
-                  <li>
-                    It has survived not only five centuries, but also electronic
-                    typesetting.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="hidden md:block md:w-1/6"></div>
         </div>
       </section>
 

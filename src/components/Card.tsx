@@ -6,12 +6,24 @@ interface Props {
   type: "primary" | "secondary" | "tertiary";
 }
 
-const Project = ({ title, text }: Props) => {
+const Project = ({ title, text, type }: Props) => {
   return (
-    <div className="px-4 py-3 m-2 bg-orange-500 w-96 rounded-xl">
-      <p className="text-2xl font-semibold text-white "> {title} </p>
-      <img src={"little-squiggly.svg"} className="w-24 mt-1"></img>
-      <ul className="mt-2 font-semibold text-white list-disc list-inside text-md md:text-lg">
+    <div className={"px-4 py-3 m-2 rounded-xl " + typeBorder(type)}>
+      <p className={"text-2xl font-semibold " + typeAccent(type)}> {title} </p>
+      <img
+        src={
+          type === "primary"
+            ? "little-squiggly.svg"
+            : "little-squiggly-orange.svg"
+        }
+        className={"w-24 mt-1" + typeText(type)}
+      ></img>
+      <ul
+        className={
+          "mt-2 font-semibold list-disc list-inside text-md md:text-lg " +
+          typeText(type)
+        }
+      >
         <li>Lorem Ipsum is simply dummy text.</li>
         <li> It is long established fact that a reader will be distracted. </li>
         <li>
@@ -22,6 +34,34 @@ const Project = ({ title, text }: Props) => {
       </ul>
     </div>
   );
+};
+
+//TODO: figure out if there is a better way to conditionally style the props, this is so gross
+const typeBorder = (type: "primary" | "secondary" | "tertiary") => {
+  switch (type) {
+    case "primary":
+      return "bg-orange-500";
+    case "secondary":
+      return "bg-white border border-orange-500 border-4";
+  }
+};
+
+const typeAccent = (type: "primary" | "secondary" | "tertiary") => {
+  switch (type) {
+    case "primary":
+      return "text-white";
+    case "secondary":
+      return "text-orange-500";
+  }
+};
+
+const typeText = (type: "primary" | "secondary" | "tertiary") => {
+  switch (type) {
+    case "primary":
+      return "text-white";
+    case "secondary":
+      return "text-orange-500";
+  }
 };
 
 export default Project;
