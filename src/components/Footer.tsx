@@ -34,17 +34,17 @@ const Footer = () => (
       <div className="flex flex-col justify-between md:flex-row ">
         <div className="flex flex-col mb-6 md:mb-0">
           <Link href="about">
-            <a className="mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-20 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               About us
             </a>
           </Link>
           <Link href="our-work">
-            <a className="mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-20 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               Our Work
             </a>
           </Link>
           <Link href="contact">
-            <a className="mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               Treetop Grove
             </a>
           </Link>
@@ -98,7 +98,7 @@ const Footer = () => (
         </div>
 
         <div className="mt-6 md:mt-0 ">
-          <hr className="self-start h-1 rounded-sm border-champagne bg-champagne w-44 md:self-end" />
+          <hr className="self-start w-64 h-0.5 rounded-sm border-champagne bg-champagne md:self-end" />
           <p className="font-semibold text-left text-champagne md:text-right text-md">
             @2021 Ladder Designs
           </p>

@@ -1,5 +1,4 @@
 import React from "react";
-import Topic from "../components/Topic";
 
 interface Props {
   title: string;
@@ -10,74 +9,85 @@ interface Props {
 const ContactForm = () => {
   return (
     <>
-      <div className="mt-10 text-black sm:mt-0">
-        <div className="md:grid md:grid-cols-2 md:gap-6">
-          <div className="mt-5 md:mt-0 md:col-span-2">
-            <form action="#" method="POST">
-              <div className="overflow-hidden shadow sm:rounded-xl">
-                <div className="px-4 py-4 bg-white sm:p-6">
-                  <div className="grid grid-cols-6 gap-6">
-                    <div className="col-span-6 sm:col-span-3">
-                      <label
-                        htmlFor="first_name"
-                        className="block font-medium text-md"
-                      >
-                        Your name
-                      </label>
-                      <input
-                        type="text"
-                        name="first_name"
-                        id="first_name"
-                        autoComplete="given-name"
-                        className="w-full px-3 py-2 leading-tight border rounded appearance-none focus:outline-none focus:shadow-outline"
-                      />
-                    </div>
-
-                    <div className="col-span-6 sm:col-span-3">
-                      <label
-                        htmlFor="last_name"
-                        className="block font-medium text-md"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="text"
-                        name="last_name"
-                        id="last_name"
-                        autoComplete="family-name"
-                        className="w-full px-3 py-2 leading-tight border rounded appearance-none focus:outline-none focus:shadow-outline"
-                      />
-                    </div>
-
-                    <div className="col-span-6 sm:col-span-6">
-                      <label
-                        htmlFor="email_address"
-                        className="block font-medium text-md"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        type="text"
-                        name="email_address"
-                        id="email_address"
-                        autoComplete="email"
-                        className="w-full px-3 py-2 leading-tight bg-gray-300 border rounded appearance-none focus:outline-none focus:shadow-outline"
-                      />
-                    </div>
-                  </div>
-                  <div className="pt-6 text-center bg-white sm:px-6">
-                    <button
-                      type="submit"
-                      className="inline-flex justify-center px-4 py-2 font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm text-md hover:bg-opacity-75 "
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
+      <div className="w-full sm:max-w-3xl md:max-w-2xl">
+        <form
+          className="p-8 text-base bg-white rounded-xl"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          action="/"
+        >
+          <div className="flex flex-wrap mb-6 -mx-3">
+            <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
+              <label
+                className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                htmlFor="firstname"
+              >
+                First Name
+              </label>
+              <input
+                className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
+                id="firstname"
+                type="text"
+                placeholder="Jane"
+              />
+              {/* <p className="text-xs italic text-red-500">
+              Please fill out this field.
+            </p> */}
+            </div>
+            <div className="w-full px-3 md:w-1/2">
+              <label
+                className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                htmlFor="lastname"
+              >
+                Last Name
+              </label>
+              <input
+                className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
+                id="lastname"
+                type="text"
+                placeholder="Doe"
+              />
+            </div>
           </div>
-        </div>
+          <div className="flex flex-wrap mb-6 -mx-3">
+            <div className="w-full px-3">
+              <label
+                className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                htmlFor="email"
+              >
+                E-mail
+              </label>
+              <input
+                className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
+                id="email"
+                placeholder="janedoe@mail.com"
+                type="email"
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap mb-6 -mx-3">
+            <div className="w-full px-3">
+              <label
+                className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
+                htmlFor="message"
+              >
+                Message
+              </label>
+              <textarea
+                className="block w-full h-48 px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none resize-none no-resize focus:outline-none focus:bg-white focus:border-gray-300"
+                id="message"
+              ></textarea>
+            </div>
+          </div>
+          <div className="flex flex-row justify-center">
+            {/* TODO: Make the button look better and rounded like the landing */}
+
+            <button className="px-4 py-2 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
+              Send Message
+            </button>
+          </div>
+        </form>
       </div>
     </>
   );
