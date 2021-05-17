@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from "react";
+import projects from "../data/projects.json";
 import Head from "next/head";
+import { GetStaticProps } from "next";
 
-import Button from "../components/Button";
-import Topic from "../components/Topic";
 import Project from "../components/Project";
+import Background from "@/components/Background";
+import Link from "next/link";
+
+interface ProjectObject {
+  [key: string]: string;
+}
+
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       projectsList: projects.sites,
+//     },
+//   };
+// }
 
 export default function OurWork() {
   return (
@@ -12,43 +26,39 @@ export default function OurWork() {
         <title>Ladder Designs</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-screen bg-champagne">
-        <div className="flex flex-row justify-center w-full h-screen text-base text-orange-800">
-          <div className="hidden w-1/6 md:block"></div>
-          <div className="flex-col px-8 mt-16 lg:px-0 lg:flex-row md:w-3/6 sm:mt-20 md:mt-28 lg:mt-36">
-            <Topic
-              title="We are a team of dedicated, artists, developers and dreamers - let us help make your website idea a reality."
-              description="Affordable, accessible website design by people who care."
-              textCentered={false}
-            ></Topic>
-            <div className="flex">
-              <Button text="OUR WORK" isTitle={false} url="/contact" />
+
+      <section className="w-full py-24 bg-champagne" id="landing">
+        <div className="grid grid-cols-1 m-4 mt-4">
+          <div className="flex items-center justify-center text-orange-800 md:justify-end">
+            <div className="w-full p-4 my-auto " id="landing-block">
+              <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl">
+                We are a team of dedicated, artists, developers and dreamers -
+                let us help make your website idea a reality.
+              </h2>
+              <h3 className="text-xl leading-tight lg:text-2xl xl:text-3xl">
+                {" "}
+                Affordable, accessible website design by people who care.{" "}
+              </h3>
+              <button className="px-4 py-2 mt-2 text-sm font-bold leading-5 text-center text-orange-800 uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
+                {" "}
+                Contact Us{" "}
+              </button>
             </div>
           </div>
-          <div className="hidden w-1/6 md:block"></div>
-          <div className="hidden w-1/6 md:block"></div>
         </div>
-      </div>
+      </section>
 
-      <section
-        className="h-auto min-h-screen bg-red-500"
-        style={{
-          backgroundImage: `url(${"/science.png"})`,
-          backgroundSize: `95%`,
-        }}
-      >
-        <div className="flex flex-col justify-around h-auto min-h-screen bg-blue-500">
-          <div className="flex flex-col justify-center justify-between w-full h-auto lg:flex-row md:px-0">
+      <section className="w-full" id="projects">
+        <Background image="science.png" width={400} height={300}>
+          <div className="grid grid-flow-row grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3">
+            <Project src="/maribel.png" url="https://maribel.io" />
+            <Project src="/maribel.png" url="https://maribel.io" />
+            <Project src="/maribel.png" url="https://maribel.io" />
             <Project src="/maribel.png" url="https://maribel.io" />
             <Project src="/maribel.png" url="https://maribel.io" />
             <Project src="/maribel.png" url="https://maribel.io" />
           </div>
-          <div className="flex flex-col justify-center justify-between w-full h-auto lg:flex-row md:px-0">
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-          </div>
-        </div>
+        </Background>
       </section>
     </>
   );

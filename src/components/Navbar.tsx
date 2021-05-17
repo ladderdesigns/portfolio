@@ -94,7 +94,7 @@ const Navbar = ({ isIndex }: Props) => {
             </a>
           </Link>
 
-          <Link href="blog">
+          <Link href="our-work">
             <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
               {" "}
               OUR WORK{" "}

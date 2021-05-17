@@ -98,7 +98,7 @@ const Footer = () => (
         </div>
 
         <div className="mt-6 md:mt-0 ">
-          <hr className="self-start h-1 rounded-sm border-champagne bg-champagne w-44 md:self-end" />
+          <hr className="self-start w-64 h-0.5 rounded-sm border-champagne bg-champagne md:self-end" />
           <p className="font-semibold text-left text-champagne md:text-right text-md">
             @2021 Ladder Designs
           </p>
