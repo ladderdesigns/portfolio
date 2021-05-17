@@ -9,8 +9,13 @@ interface Props {
   callback: Function;
 }
 
+interface TestimonialObject {
+  [key: string]: any;
+}
+
+// switched this from "testimonials: Testimonial";
 interface TestimonialGroupConfig {
-  testimonials: Testimonial;
+  testimonials: TestimonialObject;
 }
 
 const Testimonial = ({ name, title, image, isOpen, callback }: Props) => {

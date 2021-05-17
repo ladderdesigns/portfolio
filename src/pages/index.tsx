@@ -14,6 +14,14 @@ import testimonials from "../data/testimonials.json";
 import Background from "@/components/Background";
 import Card from "@/components/Card";
 
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       projectsList: projects.sites,
+//     },
+//   };
+// }
+
 export default function Index() {
   interface TestimonialObject {
     [key: string]: any;

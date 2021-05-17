@@ -15,7 +15,7 @@ export default function About() {
         <div className="flex flex-col w-full pt-8 ">
           <img
             alt="headshot"
-            src="/jacob-headshot.jpg"
+            src="https://via.placeholder.com/1600x1600"
             className="self-center w-56 h-56 mb-4 border rounded-full md:w-80 md:h-80"
           />
           <p className="text-3xl font-semibold text-center text-orange-800">
@@ -38,12 +38,12 @@ export default function About() {
             <Person
               name="Lucas Patel"
               title="Developer"
-              image="/jacob-headshot.jpg"
+              image="https://via.placeholder.com/1600x1600"
             ></Person>
             <Person
               name="Nick Tyra"
               title="Designer"
-              image="/jacob-headshot.jpg"
+              image="https://via.placeholder.com/1600x1600"
             ></Person>
           </div>
         </Background>

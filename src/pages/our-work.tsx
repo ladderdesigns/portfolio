@@ -11,15 +11,15 @@ interface ProjectObject {
   [key: string]: string;
 }
 
-export async function getStaticProps() {
-  return {
-    props: {
-      projectsList: projects.sites,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       projectsList: projects.sites,
+//     },
+//   };
+// }
 
-export default function OurWork({ projectsList }) {
+export default function OurWork() {
   return (
     <>
       <Head>

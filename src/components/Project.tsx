@@ -9,7 +9,7 @@ const Project = ({ src, url }: Props) => {
     <a className="" href={url}>
       <img
         className="border-4 border-orange-800 border-solid filter bg-champagne rounded-xl"
-        src="https://via.placeholder.com/1600x1000"
+        src="/treetop-learning.png"
       ></img>
     </a>
   );
