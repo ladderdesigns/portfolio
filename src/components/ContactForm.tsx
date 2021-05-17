@@ -15,6 +15,7 @@ const ContactForm = () => {
           name="contact"
           method="POST"
           data-netlify="true"
+          action="/"
         >
           <div className="flex flex-wrap mb-6 -mx-3">
             <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
