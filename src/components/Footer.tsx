@@ -1,16 +1,12 @@
+/* eslint-disable import/first */
 import PropTypes from "prop-types";
 import React from "react";
 import Link from "next/link";
 
-// import logo from "../static/logo.svg"
-
-// import { library } from "@fortawesome/fontawesome-svg-core"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import Button from "../components/button"
-
-// import { faTwitter, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons"
-
-// library.add(faTwitter, faFacebook, faGithub)
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 
 import {
   faGithub,
@@ -22,10 +18,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const footerColor = {
-  background:
-    "linear-gradient(180deg, rgba(133,93,81,1) 0%, rgba(164,129,119,1) 100%, rgba(168,134,124,1) 100%)",
-};
+// Prevent fontawesome from adding its CSS since we did it manually above:
+config.autoAddCss = false;
 
 const Footer = () => (
   <div className="flex flex-row h-auto bg-orange-800 md:pt-8 md:pb-8">
@@ -89,7 +83,7 @@ const Footer = () => (
               icon={faInstagram}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a href="https://twitter.com/LadderDesigns">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faTwitter}
