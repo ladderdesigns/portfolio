@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 
 import Navbar from "../components/Navbar";
-import Button from "../components/Button";
 import Heading from "../components/Heading";
-import Topic from "../components/Topic";
 import Squiggly from "../components/Squiggly";
 import Testimonial from "../components/Testimonial";
 import ContactFrom from "../components/ContactForm";

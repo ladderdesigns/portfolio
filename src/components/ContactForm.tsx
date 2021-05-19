@@ -14,6 +14,7 @@ const ContactForm = () => {
           className="p-8 text-base bg-white rounded-xl"
           name="contact"
           method="POST"
+          netlify-honeypot="bot-field"
           data-netlify="true"
           action="/"
         >
@@ -28,6 +29,7 @@ const ContactForm = () => {
               <input
                 className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
                 id="firstname"
+                name="firstname"
                 type="text"
                 placeholder="Jane"
               />
@@ -45,6 +47,7 @@ const ContactForm = () => {
               <input
                 className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
                 id="lastname"
+                name="lastname"
                 type="text"
                 placeholder="Doe"
               />
@@ -61,6 +64,7 @@ const ContactForm = () => {
               <input
                 className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
                 id="email"
+                name="email"
                 placeholder="janedoe@mail.com"
                 type="email"
               />
@@ -77,6 +81,7 @@ const ContactForm = () => {
               <textarea
                 className="block w-full h-48 px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none resize-none no-resize focus:outline-none focus:bg-white focus:border-gray-300"
                 id="message"
+                name="message"
               ></textarea>
             </div>
           </div>
