@@ -16,7 +16,7 @@ const ContactForm = () => {
           method="POST"
           netlify-honeypot="bot-field"
           data-netlify="true"
-          action="/"
+          action="/our-work"
         >
           <div className="flex flex-wrap mb-6 -mx-3">
             <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
@@ -28,7 +28,7 @@ const ContactForm = () => {
               </label>
               <input
                 className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
-                id="firstname"
+                id="yourfirstname"
                 name="firstname"
                 type="text"
                 placeholder="Jane"
@@ -46,7 +46,7 @@ const ContactForm = () => {
               </label>
               <input
                 className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
-                id="lastname"
+                id="yourlastname"
                 name="lastname"
                 type="text"
                 placeholder="Doe"
@@ -63,7 +63,7 @@ const ContactForm = () => {
               </label>
               <input
                 className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
-                id="email"
+                id="youremail"
                 name="email"
                 placeholder="janedoe@mail.com"
                 type="email"
@@ -80,7 +80,7 @@ const ContactForm = () => {
               </label>
               <textarea
                 className="block w-full h-48 px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none resize-none no-resize focus:outline-none focus:bg-white focus:border-gray-300"
-                id="message"
+                id="yourmessage"
                 name="message"
               ></textarea>
             </div>
