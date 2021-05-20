@@ -18,6 +18,8 @@ const ContactForm = () => {
           data-netlify="true"
           action="/our-work"
         >
+          <input type="hidden" name="form-name" value="contact" />
+
           <div className="flex flex-wrap mb-6 -mx-3">
             <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
               <label
