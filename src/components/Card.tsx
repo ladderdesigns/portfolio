@@ -10,14 +10,25 @@ const Project = ({ title, text, type }: Props) => {
   return (
     <div className={"px-4 py-3 m-2 rounded-xl " + typeBorder(type)}>
       <p className={"text-2xl font-semibold " + typeAccent(type)}> {title} </p>
-      <img
-        src={
-          type === "primary"
-            ? "little-squiggly.svg"
-            : "little-squiggly-orange.svg"
-        }
-        className={"w-24 mt-1" + typeText(type)}
-      ></img>
+      <svg
+        className=""
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="150px"
+        height="12px"
+        viewBox="0 0 113.4 9"
+      >
+        <path
+          fill="none"
+          stroke={type === "primary" ? "white" : "#FF8C65"}
+          strokeMiterlimit="10"
+          strokeWidth="3"
+          d="M0,2.5c5.7,0,5.7,4,11.3,4c5.7,0,5.7-4,11.3-4c5.7,0,5.7,4,11.3,4c5.7,0,5.7-4,11.3-4c5.7,0,5.7,4,11.3,4
+		c5.7,0,5.7-4,11.3-4c5.7,0,5.7,4,11.3"
+        />
+      </svg>
       <ul
         className={
           "mt-2 font-semibold list-disc list-inside text-md md:text-lg " +
