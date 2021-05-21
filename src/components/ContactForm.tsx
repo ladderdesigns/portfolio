@@ -14,12 +14,9 @@ const ContactForm = () => {
           className="p-8 text-base bg-white rounded-xl"
           name="contact"
           method="POST"
-          netlify-honeypot="bot-field"
           data-netlify="true"
-          action="/our-work"
+          action="/"
         >
-          <input type="hidden" name="form-name" value="contact" />
-
           <div className="flex flex-wrap mb-6 -mx-3">
             <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
               <label
@@ -30,8 +27,7 @@ const ContactForm = () => {
               </label>
               <input
                 className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
-                id="yourfirstname"
-                name="firstname"
+                id="firstname"
                 type="text"
                 placeholder="Jane"
               />
@@ -48,8 +44,7 @@ const ContactForm = () => {
               </label>
               <input
                 className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
-                id="yourlastname"
-                name="lastname"
+                id="lastname"
                 type="text"
                 placeholder="Doe"
               />
