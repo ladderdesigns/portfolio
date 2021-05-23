@@ -4,22 +4,17 @@ import Topic from "../components/Topic";
 interface Props {
   title: string;
   description: string;
-  textCentered: boolean;
 }
 
-const Heading = ({ title, description, textCentered }: Props) => {
+const Heading = ({ title, description }: Props) => {
   return (
     <>
-      <div className="flex flex-row w-full px-8 text-base text-orange-800 bg-champagne">
-        <div className="md:w-2/6"></div>
-        <div className="justify-center md:w-2/6">
-          <Topic
-            title={title}
-            description={description}
-            textCentered={textCentered}
-          ></Topic>
-        </div>
-        <div className="md:w-2/6"></div>
+      <div className="flex flex-col justify-start max-w-xl pb-2 text-base text-center text-orange-800 md:max-w-2xl">
+        <h2 className="pb-2 text-3xl font-bold leading-tight md:text-4xl">
+          {" "}
+          {title}{" "}
+        </h2>
+        <h3 className="text-xl leading-tight md:text-2xl"> {description}</h3>
       </div>
     </>
   );

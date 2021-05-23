@@ -22,9 +22,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 config.autoAddCss = false;
 
 const Footer = () => (
-  <div className="flex flex-row h-auto bg-orange-800 md:pt-8 md:pb-8">
-    <div className="hidden w-1/6 md:flex"></div>
-    <div className="flex flex-col w-full p-8 text-champagne md:p-0 md:w-4/6">
+  <div className="flex flex-row justify-center h-auto bg-orange-800 md:pt-8 md:pb-8">
+    <div className="flex flex-col self-center w-full max-w-2xl p-8 text-champagne md:p-0 ">
       <div className="flex flex-col justify-between md:flex-row ">
         <div className="flex flex-col mb-6 md:mb-0">
           <Link href="about">
@@ -99,7 +98,6 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="hidden w-1/6 md:flex"></div>
   </div>
 );
 

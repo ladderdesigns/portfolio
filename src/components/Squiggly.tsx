@@ -3,7 +3,7 @@ import React from "react";
 interface Props {}
 const Squiggly = ({}: Props) => {
   return (
-    <div className="w-full py-12 bg-champagne">
+    <div className="w-full py-24 bg-champagne">
       <svg
         className="mx-auto"
         version="1.1"

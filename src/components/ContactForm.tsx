@@ -9,7 +9,7 @@ interface Props {
 const ContactForm = () => {
   return (
     <>
-      <div className="w-full sm:max-w-3xl md:max-w-2xl">
+      <div className="w-full sm:max-w-xl md:max-w-2xl">
         <form
           className="p-8 text-base bg-white rounded-xl"
           name="contact"
