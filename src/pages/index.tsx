@@ -69,7 +69,7 @@ export default function Index() {
         id="what-we-do"
       >
         <div className="grid max-w-6xl grid-cols-1 p-4 pt-24 mx-auto md:grid-cols-2 place-items-center ">
-          <div className="items-center justify-center md:pr-12">
+          <div className="items-center justify-center md:pr-12 xl:pr-16">
             <img className="" src={"/devices.svg"}></img>
           </div>
           <div className="items-center justify-center p-4">
@@ -105,30 +105,31 @@ export default function Index() {
               know what makes for a good website."
           />
           <div className="flex flex-col items-center justify-center pt-24 -mx-2 md:flex-row">
+            {" "}
             <Card
               title="Accessibility"
               text={[
-                "Lorem Ipsum is simply dummy text.",
-                "It is long established fact that a reader will be distracted.",
-                "It has survived not only five centuries, but also electronic typesetting.",
+                "Websites built for any audience",
+                "Complete support for users with screenreaders or visual impairments",
+                "Comprehensive SEO to achieve high traffic for your website",
               ]}
               type="primary"
             />
             <Card
               title="Creativity"
               text={[
-                "Lorem Ipsum is simply dummy text.",
-                "It is long established fact that a reader will be distracted.",
-                "It has survived not only five centuries, but also electronic typesetting.",
+                "Custom design to your specifications",
+                "Professionally designed artwork and assets, including logos",
+                "Numerous integrations including forms, calendars, blogs, and much more",
               ]}
               type="secondary"
             />
             <Card
               title="Affordability"
               text={[
-                "Lorem Ipsum is simply dummy text.",
-                "It is long established fact that a reader will be distracted.",
-                "It has survived not only five centuries, but also electronic typesetting.",
+                "Discounts for select organizations and individuals that meet requirements",
+                "Simple monthly billing structure or single installment long-term options",
+                "No hidden costs",
               ]}
               type="primary"
             />
