@@ -1,25 +1,30 @@
 import React, { useState, useEffect } from "react";
-import projects from "../data/projects.json";
 import Head from "next/head";
-import { GetStaticProps } from "next";
+import projects from "../data/projects.json";
+import { InferGetStaticPropsType } from "next";
 
 import Project from "../components/Project";
 import Background from "@/components/Background";
 import Link from "next/link";
 
-interface ProjectObject {
-  [key: string]: string;
-}
+type Work = {
+  key: string;
+  url: string;
+  img: string;
+};
 
-// export async function getStaticProps() {
-//   return {
-//     props: {
-//       projectsList: projects.sites,
-//     },
-//   };
-// }
+export const getStaticProps = async () => {
+  const work: Work[] = projects;
+  return {
+    props: {
+      work,
+    },
+  };
+};
 
-export default function OurWork() {
+export default function OurWork({
+  work,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Head>
@@ -51,12 +56,9 @@ export default function OurWork() {
       <section className="w-full" id="projects">
         <Background image="science.png" width={400} height={300}>
           <div className="grid grid-flow-row grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3">
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
-            <Project src="/maribel.png" url="https://maribel.io" />
+            {work.map((w, i) => (
+              <Project src={`/${w.img}`} url={w.url} key={w.key} />
+            ))}
           </div>
         </Background>
       </section>
