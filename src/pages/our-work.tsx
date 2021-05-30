@@ -11,6 +11,7 @@ type Work = {
   key: string;
   url: string;
   img: string;
+  name: string;
 };
 
 export const getStaticProps = async () => {
@@ -33,7 +34,7 @@ export default function OurWork({
       </Head>
 
       <section className="w-full py-24 bg-champagne" id="landing">
-        <div className="grid grid-cols-1 m-4 mt-4">
+        <div className="grid max-w-5xl grid-cols-1 m-4 mx-auto mt-4">
           <div className="flex items-center justify-center text-orange-800 md:justify-end">
             <div className="w-full p-4 my-auto " id="landing-block">
               <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl">
@@ -55,9 +56,14 @@ export default function OurWork({
 
       <section className="w-full" id="projects">
         <Background image="science.png" width={400} height={300}>
-          <div className="grid grid-flow-row grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid max-w-5xl grid-flow-row grid-cols-1 gap-8 p-4 mx-auto md:grid-cols-2 2xl:grid-cols-3">
             {work.map((w, i) => (
-              <Project src={`/${w.img}`} url={w.url} key={w.key} />
+              <Project
+                src={`/${w.img}`}
+                url={w.url}
+                key={w.key}
+                name={w.name}
+              />
             ))}
           </div>
         </Background>
