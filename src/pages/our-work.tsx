@@ -37,18 +37,16 @@ export default function OurWork({
         <div className="grid max-w-5xl grid-cols-1 px-6 mx-auto mt-4">
           <div className="flex items-center justify-center text-orange-800 md:justify-end">
             <div className="w-full p-4 my-auto " id="landing-block">
-              <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl">
+              <h2 className="pb-2 text-2xl font-bold leading-tight sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl">
                 We are a team of dedicated, artists, developers and dreamers -
                 let us help make your website idea a reality.
               </h2>
-              <h3 className="text-xl leading-tight lg:text-2xl xl:text-3xl">
-                {" "}
-                Affordable, accessible website design by people who care.{" "}
-              </h3>
-              <button className="px-4 py-2 mt-2 text-sm font-bold leading-5 text-center text-orange-800 uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
-                {" "}
-                Contact Us{" "}
-              </button>
+
+              <Link href="#projects">
+                <a className="px-4 py-2 text-sm font-bold leading-5 text-center uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
+                  Our work
+                </a>
+              </Link>
             </div>
           </div>
         </div>

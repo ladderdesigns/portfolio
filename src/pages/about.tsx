@@ -34,17 +34,19 @@ export default function About() {
       </div>
       <section className="w-full">
         <Background image="science.png" width={400} height={300}>
-          <div className="flex flex-col items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8 lg:justify-center lg:flex-row">
-            <Person
-              name="Lucas Patel"
-              title="Developer"
-              image="https://via.placeholder.com/1600x1600"
-            ></Person>
-            <Person
-              name="Nick Tyra"
-              title="Designer"
-              image="https://via.placeholder.com/1600x1600"
-            ></Person>
+          <div className="max-w-5xl px-4 mx-auto sm:px-6">
+            <div className="flex flex-col items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8 lg:justify-center lg:flex-row">
+              <Person
+                name="Lucas Patel"
+                title="Developer"
+                image="https://via.placeholder.com/1600x1600"
+              ></Person>
+              <Person
+                name="Nick Tyra"
+                title="Designer"
+                image="https://via.placeholder.com/1600x1600"
+              ></Person>
+            </div>
           </div>
         </Background>
       </section>

@@ -36,7 +36,7 @@ const Footer = () => (
               Our Work
             </a>
           </Link>
-          <Link href="contact">
+          <Link href="/#contact-us">
             <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               Contact Us
             </a>

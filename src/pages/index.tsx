@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import Navbar from "../components/Navbar";
 import Heading from "../components/Heading";
@@ -16,7 +17,7 @@ import Card from "@/components/Card";
 import { RadioGroup, Dialog } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
 
-export default function Index({ formSubmit = false }: Object) {
+export default function Index({ formSubmit }: any) {
   const router = useRouter();
 
   let [currTestimonial, setCurrTestimonial] = useState(
@@ -37,7 +38,30 @@ export default function Index({ formSubmit = false }: Object) {
     <>
       <Head>
         <title>Ladder Designs</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="favicons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="favicons/favicon-16x16.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="favicons/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="favicons/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="favicons/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <section className="w-full text-orange-800 bg-champagne" id="landing">
         <Background image="science.png" width={400} height={300}>
@@ -55,14 +79,12 @@ export default function Index({ formSubmit = false }: Object) {
                     {" "}
                     Affordable, accessible website design by people who care.{" "}
                   </h3>
-                  <button
-                    className="px-4 py-2 text-sm font-bold leading-5 text-center uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75"
-                    type="button"
-                    onClick={() => console.log(currTestimonial)}
-                  >
-                    {" "}
-                    Contact Us{" "}
-                  </button>
+                  <Link href="#contact-us">
+                    <a className="px-4 py-2 text-sm font-bold leading-5 text-center uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
+                      {" "}
+                      Contact Us{" "}
+                    </a>
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col-reverse">
