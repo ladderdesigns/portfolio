@@ -23,7 +23,7 @@ config.autoAddCss = false;
 
 const Footer = () => (
   <div className="flex flex-row justify-center h-auto bg-orange-800 md:pt-8 md:pb-8">
-    <div className="flex flex-col self-center w-full max-w-5xl p-8 text-champagne md:p-0 ">
+    <div className="flex flex-col self-center w-full max-w-5xl p-8 text-champagne md:px-6 ">
       <div className="flex flex-col justify-between md:flex-row ">
         <div className="flex flex-col mb-6 md:mb-0">
           <Link href="about">

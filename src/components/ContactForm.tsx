@@ -1,10 +1,11 @@
 import React from "react";
+import { callbackify } from "util";
 
 interface Props {
   callback: (n: boolean) => void;
 }
 
-const ContactForm = ({ callback }: Props) => {
+const ContactForm = () => {
   return (
     <>
       <div className="w-full sm:max-w-xl md:max-w-2xl">
@@ -12,7 +13,7 @@ const ContactForm = ({ callback }: Props) => {
           className="p-8 text-base bg-white rounded-xl"
           name="contact"
           method="POST"
-          onSubmit={() => callback(true)}
+          action="?formSubmit=success"
           data-netlify="true"
         >
           <div className="flex flex-wrap mb-6 -mx-3">
@@ -84,6 +85,7 @@ const ContactForm = ({ callback }: Props) => {
             {/* TODO: Make the button look better and rounded like the landing */}
             <button
               type="submit"
+              onSubmit={(event) => doThis(event)}
               className="px-4 py-2 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75"
             >
               Send Message

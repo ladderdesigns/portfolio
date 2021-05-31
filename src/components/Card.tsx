@@ -8,7 +8,7 @@ interface Props {
 
 const Project = ({ title, text, type }: Props) => {
   return (
-    <div className={"px-4 py-3 m-2 rounded-xl " + typeBorder(type)}>
+    <div className={"px-4 py-3 m-2 rounded-xl  " + typeBorder(type)}>
       <p className={"text-2xl font-semibold " + typeAccent(type)}> {title} </p>
       <svg
         className=""
