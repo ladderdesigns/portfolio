@@ -23,16 +23,16 @@ config.autoAddCss = false;
 
 const Footer = () => (
   <div className="flex flex-row justify-center h-auto bg-orange-800 md:pt-8 md:pb-8">
-    <div className="flex flex-col self-center w-full max-w-5xl p-8 text-champagne md:px-6 ">
+    <div className="flex flex-col self-center w-full max-w-5xl p-8 mx-auto sm:px-10 text-champagne ">
       <div className="flex flex-col justify-between md:flex-row ">
         <div className="flex flex-col mb-6 md:mb-0">
           <Link href="about">
-            <a className="w-20 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               About us
             </a>
           </Link>
           <Link href="our-work">
-            <a className="w-20 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               Our Work
             </a>
           </Link>

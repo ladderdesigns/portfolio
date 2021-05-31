@@ -43,7 +43,7 @@ export default function Index({ formSubmit = false }: Object) {
         <Background image="science.png" width={400} height={300}>
           <div className="m-4 bg-champagne rounded-xl">
             <Navbar isIndex={true}></Navbar>
-            <div className="grid max-w-5xl grid-cols-1 mx-auto mt-8 md:grid-cols-2">
+            <div className="grid max-w-5xl grid-cols-1 px-4 mx-auto mt-8 sm:px-6 md:grid-cols-2">
               <div className="flex items-center justify-center my-8 md:justify-start">
                 <div className="w-full p-4 my-auto" id="landing-block">
                   <h2 className="pb-1 text-3xl font-bold leading-tight md:text-4xl">

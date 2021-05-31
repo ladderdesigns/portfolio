@@ -13,8 +13,14 @@
   },
   {
     "name": "DBQ Prepper",
-    "key": "dbqprepper.com",
+    "key": "dbq-prepper",
     "url": "https://dbqprepper.com",
     "img": "dbq-prepper.png"
+  },
+  {
+    "name": "aTABical",
+    "key": "atabical",
+    "url": "https://atabical.calmocktrial.com",
+    "img": "atabical.png"
   }
 ]
