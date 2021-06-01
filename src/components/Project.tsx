@@ -3,8 +3,9 @@ import React from "react";
 interface Props {
   src: string;
   url: string;
+  name: string;
 }
-const Project = ({ src, url }: Props) => {
+const Project = ({ src, url, name }: Props) => {
   return (
     <a
       className="z-10 border-4 border-orange-800 border-solid rounded-xl img-gradient"
@@ -14,9 +15,9 @@ const Project = ({ src, url }: Props) => {
       href={url}
     >
       <img className="z-0 rounded-lg " src={src}></img>
-      <h3 className="absolute z-20 text-4xl font-bold text-champagne bottom-2 left-2">
+      <h3 className="absolute z-20 text-4xl font-bold text-white bottom-2 left-2">
         {" "}
-        Maribel{" "}
+        {name}{" "}
       </h3>
     </a>
   );

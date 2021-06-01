@@ -23,22 +23,22 @@ config.autoAddCss = false;
 
 const Footer = () => (
   <div className="flex flex-row justify-center h-auto bg-orange-800 md:pt-8 md:pb-8">
-    <div className="flex flex-col self-center w-full max-w-2xl p-8 text-champagne md:p-0 ">
+    <div className="flex flex-col self-center w-full max-w-5xl p-8 mx-auto sm:px-10 text-champagne ">
       <div className="flex flex-col justify-between md:flex-row ">
         <div className="flex flex-col mb-6 md:mb-0">
           <Link href="about">
-            <a className="w-20 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               About us
             </a>
           </Link>
           <Link href="our-work">
-            <a className="w-20 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               Our Work
             </a>
           </Link>
-          <Link href="contact">
+          <Link href="/#contact-us">
             <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
-              Treetop Grove
+              Contact Us
             </a>
           </Link>
         </div>
@@ -52,13 +52,13 @@ const Footer = () => (
       </div>
       <div className="flex flex-col justify-between mt-6 md:flex-row">
         <div className="flex flex-row">
-          <a href="https://github.com/ladderdesigns/portfolio ">
+          <a href="https://github.com/ladderdesigns/portfolio">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faGithub}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a href="https://github.com/ladderdesigns/portfolio" alt="">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faLinkedin}
