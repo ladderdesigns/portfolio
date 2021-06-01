@@ -58,7 +58,7 @@ const Footer = () => (
               icon={faGithub}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio" alt="">
+          <a href="https://github.com/ladderdesigns/portfolio">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faLinkedin}

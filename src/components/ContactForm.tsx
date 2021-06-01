@@ -85,7 +85,6 @@ const ContactForm = () => {
             {/* TODO: Make the button look better and rounded like the landing */}
             <button
               type="submit"
-              onSubmit={(event) => doThis(event)}
               className="px-4 py-2 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75"
             >
               Send Message
