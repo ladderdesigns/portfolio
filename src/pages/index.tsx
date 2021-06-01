@@ -38,30 +38,6 @@ export default function Index({ formSubmit }: any) {
     <>
       <Head>
         <title>Ladder Designs</title>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="favicons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="favicons/favicon-16x16.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="favicons/apple-touch-icon.png"
-        />
-        <link rel="manifest" href="favicons/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="favicons/safari-pinned-tab.svg"
-          color="#5bbad5"
-        />
-        <meta name="theme-color" content="#ffffff" />
       </Head>
       <section className="w-full text-orange-800 bg-champagne" id="landing">
         <Background image="science.png" width={400} height={300}>
@@ -176,7 +152,7 @@ export default function Index({ formSubmit }: any) {
                 <RadioGroup
                   value={currTestimonial}
                   onChange={setCurrTestimonial}
-                  className="mb-8"
+                  className="mb-8 ml-24 sm:ml-48 md:ml-64 lg:ml-0"
                 >
                   <RadioGroup.Option value={testimonials.testimonialOne}>
                     {({ checked }) => (
