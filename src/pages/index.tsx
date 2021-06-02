@@ -152,7 +152,7 @@ export default function Index({ formSubmit }: any) {
                 <RadioGroup
                   value={currTestimonial}
                   onChange={setCurrTestimonial}
-                  className="mb-8 ml-24 sm:ml-48 md:ml-64 lg:ml-0"
+                  className="mb-8 sm:ml-48 md:ml-64 lg:ml-0"
                 >
                   <RadioGroup.Option value={testimonials.testimonialOne}>
                     {({ checked }) => (
@@ -185,7 +185,7 @@ export default function Index({ formSubmit }: any) {
                     )}
                   </RadioGroup.Option>
                 </RadioGroup>
-                <div className="flex flex-col justify-center px-20 text-xl text-center text-orange-800 lg:px-0 lg:pl-20 lg:w-120">
+                <div className="flex flex-col justify-center text-xl text-center text-orange-800 lg:px-0 lg:pl-20 lg:w-120">
                   <p className="text-xl italic">"{currTestimonial.quote}"</p>
                   <p className="mt-6 text-lg italic font-semibold">
                     {currTestimonial.name}

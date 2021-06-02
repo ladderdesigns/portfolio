@@ -11,8 +11,7 @@ export default function OurWork() {
   return (
     <>
       <Head>
-        <title>Ladder Designs</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>404 | Ladder Designs</title>
       </Head>
 
       <section className="w-full py-24 bg-champagne" id="landing">

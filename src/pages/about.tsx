@@ -8,8 +8,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Ladder Designs</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>About Us | Ladder Designs</title>
       </Head>
       <div className="pb-8 bg-champagne">
         <div className="flex flex-col w-full pt-8 ">
