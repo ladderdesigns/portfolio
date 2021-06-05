@@ -14,7 +14,7 @@ const Project = ({ src, url, name }: Props) => {
       }}
       href={url}
     >
-      <img className="z-0 rounded-lg " src={src}></img>
+      <img className="z-0 bg-orange-800 rounded-lg" src={src}></img>
       <h3 className="absolute z-20 text-4xl font-bold text-white bottom-2 left-2">
         {" "}
         {name}{" "}

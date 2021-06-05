@@ -37,7 +37,7 @@ export default function Index({ formSubmit }: any) {
   return (
     <>
       <Head>
-        <title>Ladder Designs</title>
+        <title>Home | Ladder Designs</title>
       </Head>
       <section className="w-full text-orange-800 bg-champagne" id="landing">
         <Background image="science.png" width={400} height={300}>
@@ -78,7 +78,7 @@ export default function Index({ formSubmit }: any) {
       <div className="bg-champagne">
         <div className="max-w-5xl px-4 mx-auto sm:px-6">
           <section className="text-base text-orange-800 " id="what-we-do">
-            <div className="grid grid-cols-1 p-4 pt-24 mx-auto lg:grid-cols-2 place-items-center ">
+            <div className="grid grid-cols-1 p-4 pt-24 mx-auto lg:grid-cols-2 place-items-center">
               <div className="items-center justify-center md:pr-12 xl:pr-16">
                 <img className="" src={"/devices.svg"}></img>
               </div>
@@ -159,7 +159,9 @@ export default function Index({ formSubmit }: any) {
                       <Testimonial
                         name={testimonials.testimonialOne.name}
                         title={testimonials.testimonialOne.title}
-                        image={testimonials.testimonialOne.image}
+                        image={
+                          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        }
                         isOpen={checked}
                       ></Testimonial>
                     )}
@@ -169,7 +171,9 @@ export default function Index({ formSubmit }: any) {
                       <Testimonial
                         name={testimonials.testimonialTwo.name}
                         title={testimonials.testimonialTwo.title}
-                        image={testimonials.testimonialTwo.image}
+                        image={
+                          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        }
                         isOpen={checked}
                       ></Testimonial>
                     )}
@@ -179,7 +183,9 @@ export default function Index({ formSubmit }: any) {
                       <Testimonial
                         name={testimonials.testimonialThree.name}
                         title={testimonials.testimonialThree.title}
-                        image={testimonials.testimonialThree.image}
+                        image={
+                          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                        }
                         isOpen={checked}
                       ></Testimonial>
                     )}

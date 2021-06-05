@@ -49,7 +49,7 @@ const Navbar = ({ isIndex }: Props) => {
                 <img
                   src={"/landing-logo.svg"}
                   alt="Ladder Designs logo"
-                  className="hidden w-64 sm:block"
+                  className="hidden w-64 ml-4 lg:ml-0 sm:block"
                 />
                 <img
                   src={"/landing-logo-mobile.svg"}
