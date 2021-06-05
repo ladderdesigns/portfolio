@@ -49,12 +49,12 @@ const Navbar = ({ isIndex }: Props) => {
                 <img
                   src={"/landing-logo.svg"}
                   alt="Ladder Designs logo"
-                  className="hidden w-64 sm:block"
+                  className="hidden w-64 ml-4 lg:ml-0 sm:block"
                 />
                 <img
                   src={"/landing-logo-mobile.svg"}
                   alt="Ladder Designs logo"
-                  className="block ml-2 w-28 sm:hidden"
+                  className="block ml-4 w-28 sm:hidden"
                 />
               </a>
             </Link>
@@ -62,13 +62,13 @@ const Navbar = ({ isIndex }: Props) => {
           <div className="flex items-center justify-center flex-1 md:items-stretch md:justify-end">
             <div className="hidden md:block md:ml-2">
               <div className="flex">
-                <Link href="about">
+                <Link href="/about">
                   <a className="px-4 py-2 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
                     ABOUT US
                   </a>
                 </Link>
 
-                <Link href="our-work">
+                <Link href="/our-work">
                   <a className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
                     {" "}
                     OUR WORK
@@ -88,13 +88,13 @@ const Navbar = ({ isIndex }: Props) => {
       </div>
       <div className={isOpen ? "block" : "hidden"}>
         <div className="px-2 pt-2 pb-3">
-          <Link href="about">
+          <Link href="/about">
             <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
               ABOUT US
             </a>
           </Link>
 
-          <Link href="our-work">
+          <Link href="/our-work">
             <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
               {" "}
               OUR WORK{" "}

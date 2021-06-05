@@ -35,8 +35,8 @@ const Project = ({ title, text, type }: Props) => {
           typeText(type)
         }
       >
-        {text.map((bullet: String) => (
-          <li>{bullet}</li>
+        {text.map((bullet: string) => (
+          <li key={bullet}>{bullet}</li>
         ))}
       </ul>
     </div>

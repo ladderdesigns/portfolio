@@ -11,7 +11,9 @@ module.exports = {
         132: '33rem',
        },
       transitionProperty: {
-        'width': 'width'
+        'width': 'width',
+        'spacing': 'margin, padding'
+
       },
       fontFamily: {
         'base': ['Roboto']

@@ -29,8 +29,7 @@ export default function OurWork({
   return (
     <>
       <Head>
-        <title>Ladder Designs</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Our Work | Ladder Designs</title>
       </Head>
 
       <section className="w-full py-24 bg-champagne" id="landing">
@@ -55,7 +54,8 @@ export default function OurWork({
       <section className="w-full" id="projects">
         <Background image="science.png" width={400} height={300}>
           <div className="max-w-5xl px-4 mx-auto sm:px-6">
-            <div className="grid grid-flow-row grid-cols-1 gap-8 p-4 mx-auto md:grid-cols-2 2xl:grid-cols-3">
+            {/* used to be 2xl:grid-cols-3 */}
+            <div className="grid grid-flow-row grid-cols-1 gap-8 p-4 mx-auto md:grid-cols-2 ">
               {work.map((w, i) => (
                 <Project
                   src={`/${w.img}`}

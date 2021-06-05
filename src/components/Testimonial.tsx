@@ -15,11 +15,11 @@ const Testimonial = ({ name, title, image, isOpen }: Props) => {
         className={
           "flex flex-row h-28 px-4 mb-4 py-2 text-white items-center rounded-2xl hover:opacity-75 transition transform duration-200 " +
           (!isOpen
-            ? "bg-white focus:w-96 w-80 transition-width rounded-lg"
-            : "bg-orange-500 w-96 transition-width rounded-lg")
+            ? "bg-white focus:w-[22rem] w-72 md:focus:w-96 md:w-80 sm:focus:w-96 sm:w-80 transition-width rounded-lg"
+            : "bg-orange-500 w-[22rem] sm:w-96 m transition-width rounded-lg")
         }
       >
-        <div className="flex-col self-center w-44">
+        <div className="flex-col self-center flex-grow-0 w-44">
           <p
             className={
               "text-xl font-bold text-left  " +
@@ -41,7 +41,7 @@ const Testimonial = ({ name, title, image, isOpen }: Props) => {
           <img
             src={image}
             alt="Testimonial image"
-            className="w-20 h-20 rounded-full"
+            className="w-20 h-20 ml-2 rounded-full sm:w-20 sm:h-20"
           />
         </div>
         <p

@@ -1,11 +1,11 @@
 {
   "testimonialOne": {
     "id": "testimonialOne",
-    "name": "Joey Michaels",
+    "name": "Tom Cook",
     "title": "Technologist at Little Red School House",
     "group": "Little Red School House",
     "quote": "When I needed to build a website for my school, Jacob and the folks at Ladder Designs changed my life. Not only did they do an incredible job meeting my school’s expectations, but they made it look great too!",
-    "image": "/joey-michaels.svg"
+    "image": "/tom-cook.png"
   },
   "testimonialTwo": {
     "id": "testimonialTwo",
@@ -13,14 +13,14 @@
     "title": "Teacher at Atherton Oaks High School",
     "group": "Atherton Oaks High School",
     "quote": "When I needed to build a website for my school, Jacob and the folks at Ladder Designs changed my life. Not only did they do an incredible job meeting my school’s expectations, but they made it look great too!",
-    "image": "/kristen-sevilla.svg"
+    "image": "/kristen-sevilla.png"
   },
   "testimonialThree": {
     "id": "testimonialThree",
-    "name": "Ali Moustafa",
+    "name": "Devon Webb",
     "title": "Instructor at New Horizons Elementary",
     "group": "New Horizons Elementary School",
     "quote": "When I needed to build a website for my school, Jacob and the folks at Ladder Designs changed my life. Not only did they do an incredible job meeting my school’s expectations, but they made it look great too!",
-    "image": "/ali-moustafa.svg"
+    "image": "/devon-webb.png"
   }
 }
