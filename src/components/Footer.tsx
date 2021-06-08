@@ -52,37 +52,49 @@ const Footer = () => (
       </div>
       <div className="flex flex-col justify-between mt-6 md:flex-row">
         <div className="flex flex-row">
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a href="https://github.com/ladderdesigns" aria-label="GitHub link">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faGithub}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a
+            href="https://www.linkedin.com/school/ladderdesigns/"
+            aria-label="LinkedIn link"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faLinkedin}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a
+            href="https://www.youtube.com/user/ladderdesigns"
+            aria-label="YouTube link"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faYoutube}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a
+            href="https://www.facebook.com/ladderdesigns/"
+            aria-label="Facebook link"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faFacebook}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a
+            href="https://www.instagram.com/ladderdesigns/?hl=en"
+            aria-label="Instagram link"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faInstagram}
             />
           </a>
-          <a href="https://twitter.com/LadderDesigns">
+          <a href="https://twitter.com/ladderdesigns" aria-label="Twitter link">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faTwitter}

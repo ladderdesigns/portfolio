@@ -5,8 +5,9 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class _Document extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
+          <meta http-equiv="Content-Security-Policy" content=""></meta>
           <link
             rel="icon"
             type="image/png"
@@ -30,7 +31,10 @@ class _Document extends Document {
             href="favicons/safari-pinned-tab.svg"
             color="#5bbad5"
           />
-          <meta name="theme-color" content="#ffffff" />
+          <meta
+            name="description"
+            content="Ladder Designs is a website design and development agency that builds high-quality educational resources for educators and students."
+          />
         </Head>
 
         <body>
