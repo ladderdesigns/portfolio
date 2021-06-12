@@ -80,7 +80,11 @@ export default function Index({ formSubmit }: any) {
           <section className="text-base text-orange-800 " id="what-we-do">
             <div className="grid grid-cols-1 p-4 pt-24 mx-auto lg:grid-cols-2 place-items-center">
               <div className="items-center justify-center md:pr-12 xl:pr-16">
-                <img className="" src={"/devices.svg"}></img>
+                <img
+                  className=""
+                  alt="Computer and phone device examples"
+                  src={"/devices.svg"}
+                ></img>
               </div>
 
               <Heading
