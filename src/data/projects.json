@@ -1,19 +1,26 @@
-{
-  "sites": [
-    {
-      "key": "treetop-learning",
-      "url": "https://treetoplearning.org",
-      "img": "/treetop-learning.png"
-    },
-    {
-      "key": "maribel",
-      "url": "https://maribel.io",
-      "img": "/maribel.png"
-    },
-    {
-      "key": "dbqprepper.com",
-      "url": "https://dbqprepper.com",
-      "img": "/dbqprepper.png"
-    }
-  ]
-}
+[
+  {
+    "name": "Treetop Learning",
+    "key": "treetop-learning",
+    "url": "https://treetoplearning.org",
+    "img": "treetop-learning.png"
+  },
+  {
+    "name": "Maribel",
+    "key": "maribel",
+    "url": "https://maribel.io",
+    "img": "maribel.png"
+  },
+  {
+    "name": "DBQ Prepper",
+    "key": "dbq-prepper",
+    "url": "https://dbqprepper.com",
+    "img": "dbq-prepper.png"
+  },
+  {
+    "name": "aTABical",
+    "key": "atabical",
+    "url": "https://atabical.calmocktrial.com",
+    "img": "atabical.png"
+  }
+]

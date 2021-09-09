@@ -2,13 +2,13 @@ import React from "react";
 
 interface Props {
   title: string;
-  text: string | string[];
+  text: string[];
   type: "primary" | "secondary" | "tertiary";
 }
 
 const Project = ({ title, text, type }: Props) => {
   return (
-    <div className={"px-4 py-3 m-2 rounded-xl " + typeBorder(type)}>
+    <div className={"px-4 py-3 m-2 rounded-xl  " + typeBorder(type)}>
       <p className={"text-2xl font-semibold " + typeAccent(type)}> {title} </p>
       <svg
         className=""
@@ -35,13 +35,9 @@ const Project = ({ title, text, type }: Props) => {
           typeText(type)
         }
       >
-        <li>Lorem Ipsum is simply dummy text.</li>
-        <li> It is long established fact that a reader will be distracted. </li>
-        <li>
-          {" "}
-          It has survived not only five centuries, but also electronic
-          typesetting.{" "}
-        </li>
+        {text.map((bullet: string) => (
+          <li key={bullet}>{bullet}</li>
+        ))}
       </ul>
     </div>
   );

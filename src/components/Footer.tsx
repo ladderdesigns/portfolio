@@ -1,16 +1,12 @@
+/* eslint-disable import/first */
 import PropTypes from "prop-types";
 import React from "react";
 import Link from "next/link";
 
-// import logo from "../static/logo.svg"
-
-// import { library } from "@fortawesome/fontawesome-svg-core"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import Button from "../components/button"
-
-// import { faTwitter, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons"
-
-// library.add(faTwitter, faFacebook, faGithub)
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 
 import {
   faGithub,
@@ -22,30 +18,27 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const footerColor = {
-  background:
-    "linear-gradient(180deg, rgba(133,93,81,1) 0%, rgba(164,129,119,1) 100%, rgba(168,134,124,1) 100%)",
-};
+// Prevent fontawesome from adding its CSS since we did it manually above:
+config.autoAddCss = false;
 
 const Footer = () => (
-  <div className="flex flex-row h-auto bg-orange-800 md:pt-8 md:pb-8">
-    <div className="hidden w-1/6 md:flex"></div>
-    <div className="flex flex-col w-full p-8 text-champagne md:p-0 md:w-4/6">
+  <div className="flex flex-row justify-center h-auto bg-orange-800 md:pt-8 md:pb-8">
+    <div className="flex flex-col self-center w-full max-w-5xl p-8 mx-auto sm:px-10 text-champagne ">
       <div className="flex flex-col justify-between md:flex-row ">
         <div className="flex flex-col mb-6 md:mb-0">
-          <Link href="about">
-            <a className="w-20 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+          <Link href="/about">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               About us
             </a>
           </Link>
-          <Link href="our-work">
-            <a className="w-20 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+          <Link href="/our-work">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
               Our Work
             </a>
           </Link>
-          <Link href="contact">
+          <Link href="/#contact-us">
             <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
-              Treetop Grove
+              Contact Us
             </a>
           </Link>
         </div>
@@ -59,37 +52,49 @@ const Footer = () => (
       </div>
       <div className="flex flex-col justify-between mt-6 md:flex-row">
         <div className="flex flex-row">
-          <a href="https://github.com/ladderdesigns/portfolio ">
+          <a href="https://github.com/ladderdesigns" aria-label="GitHub link">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faGithub}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a
+            href="https://www.linkedin.com/school/ladderdesigns/"
+            aria-label="LinkedIn link"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faLinkedin}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a
+            href="https://www.youtube.com/user/ladderdesigns"
+            aria-label="YouTube link"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faYoutube}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a
+            href="https://www.facebook.com/ladderdesigns/"
+            aria-label="Facebook link"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faFacebook}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a
+            href="https://www.instagram.com/ladderdesigns/?hl=en"
+            aria-label="Instagram link"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faInstagram}
             />
           </a>
-          <a href="https://github.com/ladderdesigns/portfolio">
+          <a href="https://twitter.com/ladderdesigns" aria-label="Twitter link">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faTwitter}
@@ -105,7 +110,6 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="hidden w-1/6 md:flex"></div>
   </div>
 );
 

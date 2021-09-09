@@ -8,43 +8,55 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Ladder Designs</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>About Us | Ladder Designs</title>
       </Head>
+
       <div className="pb-8 bg-champagne">
-        <div className="flex flex-col w-full pt-8 ">
-          <img
-            alt="headshot"
-            src="https://via.placeholder.com/1600x1600"
-            className="self-center w-56 h-56 mb-4 border rounded-full md:w-80 md:h-80"
-          />
-          <p className="text-3xl font-semibold text-center text-orange-800">
-            Jacob Patel
-          </p>
-          <p className="text-2xl italic text-center text-orange-800">Founder</p>
-          <p className="self-center px-4 mt-4 text-xl text-center text-orange-800 sm:w-4/5 md:w-3/5">
-            Coding is my life, but learning is my love. That’s why I started
-            Ladder Designs, a student-first design firm committed to creating
-            the highest quality software and educational resources for schools
-            and teachers. Whether it be online or in the classroom, I am
-            commited to creating effective tools so learners can achieve their
-            highest potentials.
-          </p>
+        <div className="items-center max-w-5xl px-10 pt-32 mx-auto my-auto sm:pb-16 bg-champagne ">
+          <div className="flex flex-col items-center justify-center p-6 ml-auto border-4 border-orange-800 md:flex-row rounded-xl ">
+            <div className="flex flex-col mb-2 min-w-max md:mb-0">
+              <img
+                alt="headshot"
+                src="https://via.placeholder.com/1600x1600"
+                className="self-center w-64 h-64 mb-4 border rounded-full "
+              />
+              <p className="text-3xl font-semibold text-center text-orange-800">
+                Jacob Patel
+              </p>
+              <p className="text-2xl italic text-center text-orange-800">
+                Founder
+              </p>
+            </div>
+            <p
+              className="max-w-lg text-xl text-left text-orange-800 md:ml-8 md:px-4 md:max-w-lg "
+              id="landing-block"
+            >
+              Coding is my life, but learning is my love. That’s why I started
+              Ladder Designs, a student-first design firm committed to creating
+              the highest quality software and educational resources for schools
+              and teachers. Whether it be online or in the classroom, I am
+              commited to creating effective tools so learners can achieve their
+              highest potentials.
+            </p>
+          </div>
         </div>
       </div>
+
       <section className="w-full">
         <Background image="science.png" width={400} height={300}>
-          <div className="flex flex-col items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8 lg:justify-center lg:flex-row">
-            <Person
-              name="Lucas Patel"
-              title="Developer"
-              image="https://via.placeholder.com/1600x1600"
-            ></Person>
-            <Person
-              name="Nick Tyra"
-              title="Designer"
-              image="https://via.placeholder.com/1600x1600"
-            ></Person>
+          <div className="max-w-5xl px-4 mx-auto sm:px-6">
+            <div className="flex flex-col items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8 lg:justify-center lg:flex-row">
+              <Person
+                name="Lucas Patel"
+                title="Developer"
+                image="https://via.placeholder.com/1600x1600"
+              ></Person>
+              <Person
+                name="Nick Tyra"
+                title="Designer"
+                image="https://via.placeholder.com/1600x1600"
+              ></Person>
+            </div>
           </div>
         </Background>
       </section>
