@@ -13,6 +13,7 @@ const ContactForm = () => {
           className="p-8 text-base bg-white rounded-xl"
           name="contact"
           method="POST"
+          netlify-honeypot="bot-field"
           action="?formSubmit=success"
           data-netlify="true"
         >
@@ -25,7 +26,7 @@ const ContactForm = () => {
                 First Name
               </label>
               <input
-                className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
+                className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none md:mb-3 focus:outline-none focus:bg-white focus:border-gray-300"
                 id="firstname"
                 type="text"
                 placeholder="Jane"
