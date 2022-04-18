@@ -216,35 +216,6 @@ export default function Index({ formSubmit }: any) {
               />
               <div className="flex justify-center w-full py-24">
                 <div className="w-full sm:max-w-xl md:max-w-2xl">
-                  <form name="pleasework" method="POST" data-netlify="true">
-                    <p>
-                      <label>
-                        Your Name: <input type="text" name="name" />
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        Your Email: <input type="email" name="email" />
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        Your Role:{" "}
-                        <select name="role[]" multiple>
-                          <option value="leader">Leader</option>
-                          <option value="follower">Follower</option>
-                        </select>
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        Message: <textarea name="message"></textarea>
-                      </label>
-                    </p>
-                    <p>
-                      <button type="submit">Send</button>
-                    </p>
-                  </form>
                   <form
                     className="p-8 text-base bg-white rounded-xl"
                     name="contact"
