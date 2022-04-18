@@ -1,9 +1,4 @@
 import React from "react";
-import { callbackify } from "util";
-
-interface Props {
-  callback: (n: boolean) => void;
-}
 
 const ContactForm = () => {
   return (
@@ -31,9 +26,6 @@ const ContactForm = () => {
                 type="text"
                 placeholder="Jane"
               />
-              {/* <p className="text-xs italic text-red-500">
-              Please fill out this field.
-            </p> */}
             </div>
             <div className="w-full px-3 md:w-1/2">
               <label
