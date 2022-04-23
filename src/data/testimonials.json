@@ -1,11 +1,11 @@
 {
   "testimonialOne": {
     "id": "testimonialOne",
-    "name": "Tom Cook",
-    "title": "Technologist at Little Red School House",
-    "group": "Little Red School House",
-    "quote": "When I needed to build a website for my school, Jacob and the folks at Ladder Designs changed my life. Not only did they do an incredible job meeting my school’s expectations, but they made it look great too!",
-    "image": "/tom-cook.png"
+    "name": "Nick Cotter",
+    "title": "Public Defender at Alameda County",
+    "group": "Alameda County Public Defender's Office",
+    "quote": "I contacted the team at Ladder Designs to build a website for my college mock trial tournament, and my expectations were far exceeded. They delivered a quality product, on time and at an affordable price. I can't recommend their services enough!",
+    "image": "/nick-cotter.jpeg"
   },
   "testimonialTwo": {
     "id": "testimonialTwo",

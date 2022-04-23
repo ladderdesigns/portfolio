@@ -37,7 +37,7 @@ const Testimonial = ({ name, title, image, isOpen }: Props) => {
             {title}
           </p>
         </div>
-        <div className="my-auto ">
+        <div className="my-auto">
           <img
             src={image}
             alt="Testimonial image"

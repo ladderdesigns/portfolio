@@ -7,7 +7,7 @@ class _Document extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta http-equiv="Content-Security-Policy" content=""></meta>
+          <meta httpEquiv="Content-Security-Policy" content=""></meta>
           <link
             rel="icon"
             type="image/png"
