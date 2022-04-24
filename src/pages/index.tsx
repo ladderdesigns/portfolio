@@ -223,6 +223,15 @@ export default function Index({ formSubmit }: any) {
                     data-netlify="true"
                   >
                     <div className="flex flex-wrap mb-6 -mx-3">
+                      <div>
+                        <input type="hidden" name="form-name" value="contact" />
+                      </div>
+                      <div className="hidden">
+                        <label>
+                          Don’t fill this out if you’re human:{" "}
+                          <input name="bot-field" />
+                        </label>
+                      </div>
                       <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                         <label
                           className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
