@@ -235,6 +235,7 @@ export default function Index({ formSubmit }: any) {
                           id="firstname"
                           type="text"
                           placeholder="Jane"
+                          name="firstname"
                         />
                       </div>
                       <div className="w-full px-3 md:w-1/2">
@@ -247,6 +248,7 @@ export default function Index({ formSubmit }: any) {
                         <input
                           className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
                           id="lastname"
+                          name="lastname"
                           type="text"
                           placeholder="Doe"
                         />
