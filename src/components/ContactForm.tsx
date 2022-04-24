@@ -25,6 +25,7 @@ const ContactForm = () => {
                 id="firstname"
                 type="text"
                 placeholder="Jane"
+                name="firstname"
               />
             </div>
             <div className="w-full px-3 md:w-1/2">
@@ -39,6 +40,7 @@ const ContactForm = () => {
                 id="lastname"
                 type="text"
                 placeholder="Doe"
+                name="lastname"
               />
             </div>
           </div>
