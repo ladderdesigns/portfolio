@@ -215,7 +215,12 @@ export default function Index({ formSubmit }: any) {
               <div className="flex justify-center w-full py-24">
                 <div className="w-full sm:max-w-xl md:max-w-2xl">
                   {/* <!-- A little help for the Netlify post-processing bots --> */}
-                  <form name="contact" netlify-honeypot="bot-field" hidden>
+                  <form
+                    name="contact"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                    hidden
+                  >
                     <input type="text" name="firstname" />
                     <input type="text" name="lastname" />
                     <input type="email" name="email" />
@@ -229,7 +234,7 @@ export default function Index({ formSubmit }: any) {
                     name="contact"
                     method="POST"
                     netlify-honeypot="bot-field"
-                    action="?formSubmit=success"
+                    action="#"
                     data-netlify="true"
                   >
                     <div className="flex flex-wrap mb-6 -mx-3">
