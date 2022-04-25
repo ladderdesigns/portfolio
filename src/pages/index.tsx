@@ -219,7 +219,7 @@ export default function Index({ formSubmit }: any) {
                     name="contact"
                     method="POST"
                     netlify-honeypot="bot-field"
-                    action="?formSubmit=success"
+                    action="#"
                     data-netlify="true"
                   >
                     <div className="flex flex-wrap mb-6 -mx-3">
