@@ -210,7 +210,7 @@ export default function Index({ formSubmit }: any) {
               <Heading
                 title="Get in touch!"
                 description="Contact us so we can learn more about your project and get you a
-            quote."
+          quote."
               />
               <div className="flex justify-center w-full py-24">
                 <div className="w-full sm:max-w-xl md:max-w-2xl">
@@ -219,19 +219,16 @@ export default function Index({ formSubmit }: any) {
                     name="contact"
                     method="POST"
                     netlify-honeypot="bot-field"
-                    action="/"
+                    action="/success"
                     data-netlify="true"
+                    data-netlify-recaptcha="true"
                   >
                     <div className="flex flex-wrap mb-6 -mx-3">
-                      <div>
-                        <input type="hidden" name="contact" value="contact" />
-                      </div>
-                      <div className="hidden">
-                        <label>
-                          Don’t fill this out if you’re human:{" "}
-                          <input name="bot-field" />
-                        </label>
-                      </div>
+                      <input type="hidden" name="form-name" value="contact" />
+                      <label className="hidden">
+                        Don’t fill this out if you’re human:{" "}
+                        <input name="bot-field" />
+                      </label>
                       <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                         <label
                           className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
