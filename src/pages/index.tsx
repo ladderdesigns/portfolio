@@ -219,7 +219,7 @@ export default function Index({ formSubmit }: any) {
                     name="contact"
                     method="POST"
                     netlify-honeypot="bot-field"
-                    action="/success"
+                    action="/success/"
                     data-netlify="true"
                     data-netlify-recaptcha="true"
                   >
