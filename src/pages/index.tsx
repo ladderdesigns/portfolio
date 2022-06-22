@@ -82,7 +82,7 @@ export default function Index({ formSubmit }: any) {
                 <img
                   className=""
                   alt="Computer and phone device examples"
-                  src={"/devices.svg"}
+                  src={"/devices.png"}
                 ></img>
               </div>
 
