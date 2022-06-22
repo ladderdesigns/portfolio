@@ -16,6 +16,8 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Prevent fontawesome from adding its CSS since we did it manually above:
@@ -58,7 +60,7 @@ const Footer = () => (
               icon={faGithub}
             />
           </a>
-          <a
+          {/* <a
             href="https://www.linkedin.com/school/ladderdesigns/"
             aria-label="LinkedIn link"
           >
@@ -66,8 +68,8 @@ const Footer = () => (
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faLinkedin}
             />
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href="https://www.youtube.com/user/ladderdesigns"
             aria-label="YouTube link"
           >
@@ -75,29 +77,17 @@ const Footer = () => (
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faYoutube}
             />
-          </a>
-          <a
-            href="https://www.facebook.com/ladderdesigns/"
-            aria-label="Facebook link"
-          >
-            <FontAwesomeIcon
-              className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
-              icon={faFacebook}
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/ladderdesigns/?hl=en"
-            aria-label="Instagram link"
-          >
-            <FontAwesomeIcon
-              className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
-              icon={faInstagram}
-            />
-          </a>
+          </a> */}
           <a href="https://twitter.com/ladderdesigns" aria-label="Twitter link">
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faTwitter}
+            />
+          </a>
+          <a href="mailto:contact@ladderdesigns.co" aria-label="Email link">
+            <FontAwesomeIcon
+              className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
+              icon={faEnvelope}
             />
           </a>
         </div>
