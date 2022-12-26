@@ -17,7 +17,7 @@ export default function About() {
             <div className="flex flex-col mb-2 min-w-max md:mb-0">
               <img
                 alt="headshot"
-                src="https://via.placeholder.com/1600x1600"
+                src="jacob-headshot.jpeg"
                 className="self-center w-64 h-64 mb-4 border rounded-full "
               />
               <p className="text-3xl font-semibold text-center text-orange-800">
