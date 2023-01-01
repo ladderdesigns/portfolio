@@ -5,6 +5,12 @@
     "url": "https://treetoplearning.org",
     "img": "treetop-learning.png"
   },
+   {
+    "name": "aTABical",
+    "key": "atabical",
+    "url": "https://atabical.com",
+    "img": "atabical.png"
+  },
   {
     "name": "Maribel",
     "key": "maribel",
@@ -18,9 +24,9 @@
     "img": "dbq-prepper.png"
   },
   {
-    "name": "aTABical",
-    "key": "atabical",
-    "url": "https://atabical.com",
-    "img": "atabical.png"
+    "name": "Dr. B.V. Chandramouli",
+    "key": "dr-chandramouli",
+    "url": "https://drchandramouli.com",
+    "img": "drchandramouli.png"
   }
 ]

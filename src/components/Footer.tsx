@@ -29,17 +29,17 @@ const Footer = () => (
       <div className="flex flex-col justify-between md:flex-row ">
         <div className="flex flex-col mb-6 md:mb-0">
           <Link href="/about">
-            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 cursor-pointer text-champagne focus:opacity-50 hover:opacity-50">
               About us
             </a>
           </Link>
           <Link href="/our-work">
-            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 cursor-pointer text-champagne focus:opacity-50 hover:opacity-50">
               Our Work
             </a>
           </Link>
           <Link href="/#contact-us">
-            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 text-champagne focus:opacity-50 hover:opacity-50">
+            <a className="w-32 mb-6 text-lg font-semibold transition duration-100 cursor-pointer text-champagne focus:opacity-50 hover:opacity-50">
               Contact Us
             </a>
           </Link>
@@ -54,7 +54,11 @@ const Footer = () => (
       </div>
       <div className="flex flex-col justify-between mt-6 md:flex-row">
         <div className="flex flex-row">
-          <a href="https://github.com/ladderdesigns" aria-label="GitHub link">
+          <a
+            href="https://github.com/ladderdesigns"
+            aria-label="GitHub link"
+            className="cursor-pointer"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faGithub}
@@ -78,13 +82,21 @@ const Footer = () => (
               icon={faYoutube}
             />
           </a> */}
-          <a href="https://twitter.com/ladderdesigns" aria-label="Twitter link">
+          <a
+            href="https://twitter.com/ladderdesigns"
+            aria-label="Twitter link"
+            className="cursor-pointer"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faTwitter}
             />
           </a>
-          <a href="mailto:contact@ladderdesigns.co" aria-label="Email link">
+          <a
+            href="mailto:contact@ladderdesigns.co"
+            aria-label="Email link"
+            className="cursor-pointer"
+          >
             <FontAwesomeIcon
               className="w-5 h-5 mr-5 transition duration-100 focus:opacity-50 hover:opacity-50"
               icon={faEnvelope}

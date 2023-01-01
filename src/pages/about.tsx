@@ -34,7 +34,7 @@ export default function About() {
               Coding is my life, but learning is my love. That’s why I started
               Ladder Designs, a student-first design firm committed to creating
               the highest quality software and educational resources for schools
-              and teachers. Whether it be online or in the classroom, I am
+              and teachers. Whether it's online or in the classroom, I'm
               commited to creating effective tools so learners can achieve their
               highest potentials.
             </p>

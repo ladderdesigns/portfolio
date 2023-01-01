@@ -157,7 +157,10 @@ export default function Index({ formSubmit }: any) {
                   onChange={setCurrTestimonial}
                   className="mb-8 sm:ml-48 md:ml-64 lg:ml-0"
                 >
-                  <RadioGroup.Option value={testimonials.testimonialOne}>
+                  <RadioGroup.Option
+                    className="w-64"
+                    value={testimonials.testimonialOne}
+                  >
                     {({ checked }) => (
                       <Testimonial
                         name={testimonials.testimonialOne.name}
@@ -172,9 +175,7 @@ export default function Index({ formSubmit }: any) {
                       <Testimonial
                         name={testimonials.testimonialTwo.name}
                         title={testimonials.testimonialTwo.title}
-                        image={
-                          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        }
+                        image={testimonials.testimonialTwo.image}
                         isOpen={checked}
                       ></Testimonial>
                     )}
@@ -192,6 +193,7 @@ export default function Index({ formSubmit }: any) {
                     )}
                   </RadioGroup.Option>
                 </RadioGroup>
+
                 <div className="flex flex-col justify-center text-xl text-center text-orange-800 lg:px-0 lg:pl-20 lg:w-120">
                   <p className="text-xl italic">"{currTestimonial.quote}"</p>
                   <p className="mt-6 text-lg italic font-semibold">
@@ -296,22 +298,13 @@ export default function Index({ formSubmit }: any) {
                       {/* TODO: Make the button look better and rounded like the landing */}
                       <button
                         type="submit"
-                        className="px-4 py-2 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75"
+                        className="px-6 py-3 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 shadow-lg rounded-2xl focus:outline-none hover:opacity-75 focus:opacity-75"
                       >
                         Send Message
                       </button>
                     </div>
                   </form>
                 </div>
-                {/* <div className="fixed inset-0 flex items-center justify-center">
-                  <button
-                    type="button"
-                    onClick={() => setIsOpen(true)}
-                    className="px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-                  >
-                    Open dialog
-                  </button>
-                </div> */}
 
                 <Transition appear show={isOpen} as={Fragment}>
                   <Dialog
