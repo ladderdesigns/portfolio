@@ -16,7 +16,7 @@ const Testimonial = ({ name, title, image, isOpen }: Props) => {
           "flex flex-row h-28 px-4 mb-4 py-2 text-white items-center rounded-2xl hover:opacity-75 transition transform duration-200 " +
           (!isOpen
             ? "bg-white xs:focus:w-[22rem] xs:w-72 md:focus:w-108 md:w-96 sm:focus:w-96 sm:w-80 transition-width rounded-lg"
-            : "bg-orange-500 xs:w-[22rem] sm:w-72 transition-width rounded-lg")
+            : "bg-orange-500 md:focus:w-108 md:w-96 transition-width rounded-lg")
         }
       >
         <div className="flex-col self-center flex-grow-0 w-44">
