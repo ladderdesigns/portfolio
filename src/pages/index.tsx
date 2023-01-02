@@ -157,10 +157,7 @@ export default function Index({ formSubmit }: any) {
                   onChange={setCurrTestimonial}
                   className="mb-8 sm:ml-48 md:ml-64 lg:ml-0"
                 >
-                  <RadioGroup.Option
-                    className="w-64"
-                    value={testimonials.testimonialOne}
-                  >
+                  <RadioGroup.Option value={testimonials.testimonialOne}>
                     {({ checked }) => (
                       <Testimonial
                         name={testimonials.testimonialOne.name}

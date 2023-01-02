@@ -106,8 +106,17 @@ const Footer = () => (
 
         <div className="mt-6 md:mt-0 ">
           <hr className="self-start w-64 h-0.5 rounded-sm border-champagne bg-champagne md:self-end" />
+
           <p className="font-semibold text-left text-champagne md:text-right text-md">
-            @2022 Ladder Designs
+            <Link href="https://ladderdesigns.co">
+              <a
+                className="cursor-pointer focus:opacity-50 hover:opacity-50"
+                href="https://ladderdesigns.co"
+              >
+                Ladder Designs
+              </a>
+            </Link>{" "}
+            &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>
