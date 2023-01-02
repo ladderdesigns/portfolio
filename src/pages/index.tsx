@@ -295,7 +295,7 @@ export default function Index({ formSubmit }: any) {
                       {/* TODO: Make the button look better and rounded like the landing */}
                       <button
                         type="submit"
-                        className="px-6 py-3 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 shadow-lg rounded-2xl focus:outline-none hover:opacity-75 focus:opacity-75"
+                        className="px-6 py-3 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 rounded-lg shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75"
                       >
                         Send Message
                       </button>
