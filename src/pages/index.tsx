@@ -241,6 +241,7 @@ export default function Index({ formSubmit }: any) {
                           type="text"
                           placeholder="Jane"
                           name="firstname"
+                          required
                         />
                       </div>
                       <div className="w-full px-3 md:w-1/2">
@@ -256,6 +257,7 @@ export default function Index({ formSubmit }: any) {
                           name="lastname"
                           type="text"
                           placeholder="Doe"
+                          required
                         />
                       </div>
                     </div>
@@ -273,6 +275,7 @@ export default function Index({ formSubmit }: any) {
                           name="email"
                           placeholder="janedoe@mail.com"
                           type="email"
+                          required
                         />
                       </div>
                     </div>
