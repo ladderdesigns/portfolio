@@ -12,7 +12,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   } else {
     return (
       <Layout>
-        {" "}
         <Component {...pageProps} />
       </Layout>
     );

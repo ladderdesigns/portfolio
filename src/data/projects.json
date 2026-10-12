@@ -2,31 +2,31 @@
   {
     "name": "Treetop Learning",
     "key": "treetop-learning",
-    "url": "https://treetoplearning.org",
-    "img": "treetop-learning.png"
+    "url": "https://treetop-cambium.netlify.app",
+    "img": "treetop-learning.webp"
   },
-   {
+  {
     "name": "aTABical",
     "key": "atabical",
     "url": "https://atabical.com",
-    "img": "atabical.png"
+    "img": "atabical.webp"
   },
   {
     "name": "Maribel",
     "key": "maribel",
     "url": "https://maribel.io",
-    "img": "maribel.png"
+    "img": "maribel.webp"
   },
   {
     "name": "DBQ Prepper",
     "key": "dbq-prepper",
-    "url": "https://dbqprepper.app",
-    "img": "dbq-prepper.png"
+    "url": "https://dbqprepper.netlify.app",
+    "img": "dbq-prepper.webp"
   },
   {
     "name": "Dr. B.V. Chandramouli",
     "key": "dr-chandramouli",
     "url": "https://drchandramouli.com",
-    "img": "drchandramouli.png"
+    "img": "drchandramouli.webp"
   }
 ]

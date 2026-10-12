@@ -1,24 +1,30 @@
-import React, { useState, useEffect } from "react";
-import Head from "next/head";
-import Person from "../components/Person";
+import React from "react";
+import Image from "next/image";
 
+import Person from "../components/Person";
 import Background from "@/components/Background";
+import Meta from "@/components/Meta";
 
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About Us | Ladder Designs</title>
-      </Head>
+      <Meta
+        title="About Us | Ladder Designs"
+        path="/about"
+        description="Meet the team behind Ladder Designs, a student-first design firm building websites and educational software for schools and teachers."
+      />
 
       <div className="pb-8 bg-champagne">
         <div className="items-center max-w-5xl px-10 pt-32 mx-auto my-auto sm:pb-16 bg-champagne ">
           <div className="flex flex-col items-center justify-center p-6 ml-auto border-4 border-orange-800 md:flex-row rounded-xl ">
             <div className="flex flex-col mb-2 min-w-max md:mb-0">
-              <img
-                alt="headshot"
-                src="jacob-headshot.jpeg"
-                className="self-center w-64 h-64 mb-4 border rounded-full "
+              <Image
+                alt="Jacob Patel"
+                src="/jacob-headshot.jpeg"
+                width={256}
+                height={256}
+                priority
+                className="self-center w-64 h-64 mb-4 border rounded-full"
               />
               <p className="text-3xl font-semibold text-center text-orange-800">
                 Jacob Patel
@@ -34,8 +40,8 @@ export default function About() {
               Coding is my life, but learning is my love. That’s why I started
               Ladder Designs, a student-first design firm committed to creating
               the highest quality software and educational resources for schools
-              and teachers. Whether it's online or in the classroom, I'm
-              commited to creating effective tools so learners can achieve their
+              and teachers. Whether it’s online or in the classroom, I’m
+              committed to creating effective tools so learners can achieve their
               highest potentials.
             </p>
           </div>
