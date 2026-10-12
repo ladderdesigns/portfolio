@@ -1,6 +1,6 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, FormEvent, useState } from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import Image from "next/image";
 import Link from "next/link";
 
 import Navbar from "../components/Navbar";
@@ -12,60 +12,75 @@ import Footer from "../components/Footer";
 import testimonials from "../data/testimonials.json";
 import Background from "@/components/Background";
 import Card from "@/components/Card";
+import Meta from "@/components/Meta";
 
-import { RadioGroup, Dialog } from "@headlessui/react";
-import { Transition } from "@headlessui/react";
+import { RadioGroup, Dialog, Transition } from "@headlessui/react";
 
-export default function Index({ formSubmit }: any) {
-  const router = useRouter();
+type FormStatus = "idle" | "submitting" | "error";
 
-  let [currTestimonial, setCurrTestimonial] = useState(
+export default function Index() {
+  const [currTestimonial, setCurrTestimonial] = useState(
     testimonials.testimonialOne
   );
-  let [plan, setPlan] = useState("startup");
+  const [isOpen, setIsOpen] = useState(false);
+  const [status, setStatus] = useState<FormStatus>("idle");
 
-  let [isOpen, setIsOpen] = useState(
-    JSON.parse(formSubmit).formSubmit === "success"
-  );
-
-  function closeModal() {
-    setIsOpen(false);
-    router.push("/");
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setStatus("submitting");
+    try {
+      const body = new URLSearchParams(
+        new FormData(form) as unknown as Record<string, string>
+      ).toString();
+      // Netlify Forms only accepts submissions posted to a static file.
+      const response = await fetch("/contact_form.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      });
+      if (!response.ok) throw new Error(`Form submission failed: ${response.status}`);
+      form.reset();
+      setStatus("idle");
+      setIsOpen(true);
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
     <>
+      <Meta title="Ladder Designs | Affordable, accessible website design" path="/" />
       <Head>
-        <title>Home | Ladder Designs</title>
+        <link rel="preload" as="image" href="/science.png" />
       </Head>
       <section className="w-full text-orange-800 bg-champagne" id="landing">
         <Background image="science.png" width={400} height={300}>
           <div className="m-4 bg-champagne rounded-xl">
-            <Navbar isIndex={true}></Navbar>
+            <Navbar isIndex />
             <div className="grid max-w-5xl grid-cols-1 px-4 mx-auto mt-8 sm:px-6 md:grid-cols-2">
               <div className="flex items-center justify-center my-8 md:justify-start">
-                <div className="w-full p-4 my-auto" id="landing-block">
-                  <h2 className="pb-1 text-3xl font-bold leading-tight md:text-4xl">
-                    {" "}
+                <div className="w-full p-4 my-auto">
+                  <h1 className="pb-1 text-3xl font-bold leading-tight md:text-4xl">
                     We build high quality education technology, so you don’t
-                    have to.{" "}
-                  </h2>
-                  <h3 className="pb-2 text-xl leading-tight md:text-2xl">
-                    {" "}
-                    Affordable, accessible website design by people who care.{" "}
-                  </h3>
-                  <Link href="#contact-us">
-                    <a className="px-4 py-2 text-sm font-bold leading-5 text-center uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
+                    have to.
+                  </h1>
+                  <p className="pb-2 text-xl leading-tight md:text-2xl">
+                    Affordable, accessible website design by people who care.
+                  </p>
+                  <Link href="#contact-us" className="px-4 py-2 text-sm font-bold leading-5 text-center uppercase transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75">
                       {" "}
                       Contact Us{" "}
-                    </a>
-                  </Link>
+                    </Link>
                 </div>
               </div>
               <div className="flex flex-col-reverse">
                 <img
-                  src={"/learner.svg"}
-                  alt="The website designer himself."
+                  src="/learner.svg"
+                  alt=""
+                  width={560}
+                  height={693}
+                  fetchPriority="high"
                   className="w-3/5 pt-8 mx-auto md:w-4/5 md:ml-auto md:mr-4"
                 />
               </div>
@@ -74,16 +89,18 @@ export default function Index({ formSubmit }: any) {
         </Background>
       </section>
 
-      <div className="bg-champagne">
+      <main className="bg-champagne">
         <div className="max-w-5xl px-4 mx-auto sm:px-6">
-          <section className="text-base text-orange-800 " id="what-we-do">
+          <section className="text-base text-orange-800" id="what-we-do">
             <div className="grid grid-cols-1 p-4 pt-24 mx-auto lg:grid-cols-2 place-items-center">
               <div className="items-center justify-center md:pr-12 xl:pr-16">
-                <img
-                  className=""
-                  alt="Computer and phone device examples"
-                  src={"/devices.png"}
-                ></img>
+                <Image
+                  alt="Example websites shown on a laptop and a phone"
+                  src="/devices.webp"
+                  width={1200}
+                  height={729}
+                  sizes="(min-width: 1024px) 460px, 90vw"
+                />
               </div>
 
               <Heading
@@ -96,9 +113,9 @@ export default function Index({ formSubmit }: any) {
             </div>
           </section>
 
-          <Squiggly></Squiggly>
+          <Squiggly />
 
-          <section className="text-base text-orange-800 " id="what-we-do">
+          <section className="text-base text-orange-800" id="why-us">
             <div className="flex flex-col items-center justify-center w-full mx-auto">
               <Heading
                 title="Why us?"
@@ -138,13 +155,10 @@ export default function Index({ formSubmit }: any) {
             </div>
           </section>
 
-          <Squiggly></Squiggly>
+          <Squiggly />
 
-          <section className="text-base text-orange-800 " id="what-we-do">
-            <div
-              className="flex flex-col items-center justify-center w-full mx-auto"
-              id="what-we-value"
-            >
+          <section className="text-base text-orange-800" id="testimonials">
+            <div className="flex flex-col items-center justify-center w-full mx-auto">
               <Heading
                 title="What our clients say"
                 description="We love hearing from our clients whether learners themselves or
@@ -182,9 +196,7 @@ export default function Index({ formSubmit }: any) {
                       <Testimonial
                         name={testimonials.testimonialThree.name}
                         title={testimonials.testimonialThree.title}
-                        image={
-                          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                        }
+                        image={testimonials.testimonialThree.image}
                         isOpen={checked}
                       ></Testimonial>
                     )}
@@ -192,7 +204,7 @@ export default function Index({ formSubmit }: any) {
                 </RadioGroup>
 
                 <div className="flex flex-col justify-center text-xl text-center text-orange-800 lg:px-0 lg:pl-20 lg:w-120">
-                  <p className="text-xl italic">"{currTestimonial.quote}"</p>
+                  <p className="text-xl italic">“{currTestimonial.quote}”</p>
                   <p className="mt-6 text-lg italic font-semibold">
                     {currTestimonial.name}
                   </p>
@@ -202,7 +214,7 @@ export default function Index({ formSubmit }: any) {
             </div>
           </section>
 
-          <Squiggly></Squiggly>
+          <Squiggly />
 
           <section className="text-base text-orange-800" id="contact-us">
             <div className="flex flex-col items-center justify-center w-full mx-auto">
@@ -217,16 +229,13 @@ export default function Index({ formSubmit }: any) {
                     className="p-8 text-base bg-white rounded-xl"
                     name="contact"
                     method="POST"
-                    netlify-honeypot="bot-field"
-                    action="/success/"
-                    data-netlify="true"
-                    data-netlify-recaptcha="true"
+                    onSubmit={handleSubmit}
                   >
                     <div className="flex flex-wrap mb-6 -mx-3">
                       <input type="hidden" name="form-name" value="contact" />
                       <label className="hidden">
                         Don’t fill this out if you’re human:{" "}
-                        <input name="bot-field" />
+                        <input name="bot-field" tabIndex={-1} autoComplete="off" />
                       </label>
                       <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                         <label
@@ -238,6 +247,7 @@ export default function Index({ formSubmit }: any) {
                         <input
                           className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none md:mb-3 focus:outline-none focus:bg-white focus:border-gray-300"
                           id="firstname"
+                          autoComplete="given-name"
                           type="text"
                           placeholder="Jane"
                           name="firstname"
@@ -254,6 +264,7 @@ export default function Index({ formSubmit }: any) {
                         <input
                           className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
                           id="lastname"
+                          autoComplete="family-name"
                           name="lastname"
                           type="text"
                           placeholder="Doe"
@@ -271,7 +282,8 @@ export default function Index({ formSubmit }: any) {
                         </label>
                         <input
                           className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-300"
-                          id="youremail"
+                          id="email"
+                          autoComplete="email"
                           name="email"
                           placeholder="janedoe@mail.com"
                           type="email"
@@ -294,14 +306,42 @@ export default function Index({ formSubmit }: any) {
                         ></textarea>
                       </div>
                     </div>
-                    <div className="flex flex-row justify-center">
-                      {/* TODO: Make the button look better and rounded like the landing */}
+                    <div className="flex flex-col items-center">
                       <button
                         type="submit"
-                        className="px-6 py-3 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 rounded-lg shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75"
+                        disabled={status === "submitting"}
+                        className="px-6 py-3 text-sm font-bold leading-5 text-center text-white transition duration-150 ease-in-out bg-orange-500 rounded-lg shadow-lg focus:outline-none hover:opacity-75 focus:opacity-75 disabled:cursor-wait disabled:opacity-75"
                       >
-                        Send Message
+                        <span className="grid">
+                          <span
+                            className={
+                              "col-start-1 row-start-1 " +
+                              (status === "submitting" ? "invisible" : "")
+                            }
+                          >
+                            Send Message
+                          </span>
+                          <span
+                            aria-hidden={status !== "submitting"}
+                            className={
+                              "col-start-1 row-start-1 " +
+                              (status === "submitting" ? "" : "invisible")
+                            }
+                          >
+                            Sending…
+                          </span>
+                        </span>
                       </button>
+                      <p
+                        role="alert"
+                        className={
+                          "mt-4 text-sm text-center text-red-700 " +
+                          (status === "error" ? "" : "hidden")
+                        }
+                      >
+                        Something went wrong sending your message. Please try
+                        again or email jseanpatel@gmail.com.
+                      </p>
                     </div>
                   </form>
                 </div>
@@ -351,16 +391,16 @@ export default function Index({ formSubmit }: any) {
                           </Dialog.Title>
                           <div className="mt-2">
                             <p className="text-sm text-gray-500">
-                              We have recieved your messaged and we'll get back
+                              We have received your message and we’ll get back
                               to you shortly.
                             </p>
                           </div>
 
-                          <div className="mt-4">
+                          <div className="flex mt-4">
                             <button
                               type="button"
-                              className="inline-flex justify-center px-4 py-2 ml-64 text-sm font-bold text-white bg-orange-500 border border-transparent rounded-full shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-orange-500 hover:opacity-75"
-                              onClick={() => closeModal()}
+                              className="inline-flex justify-center px-4 py-2 ml-auto text-sm font-bold text-white bg-orange-500 border border-transparent rounded-full shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-orange-500 hover:opacity-75"
+                              onClick={() => setIsOpen(false)}
                             >
                               Got it, thanks!
                             </button>
@@ -374,15 +414,9 @@ export default function Index({ formSubmit }: any) {
             </div>
           </section>
         </div>
-      </div>
+      </main>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
-
-Index.getInitialProps = async (context: any) => {
-  const result = JSON.stringify(context.query);
-
-  return { formSubmit: String(result) };
-};

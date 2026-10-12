@@ -6,12 +6,12 @@ interface Props {
   type: "primary" | "secondary" | "tertiary";
 }
 
-const Project = ({ title, text, type }: Props) => {
+const Card = ({ title, text, type }: Props) => {
   return (
     <div className={"px-4 py-3 m-2 rounded-xl  " + typeBorder(type)}>
       <p className={"text-2xl font-semibold " + typeAccent(type)}> {title} </p>
       <svg
-        className=""
+        aria-hidden="true"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -26,7 +26,7 @@ const Project = ({ title, text, type }: Props) => {
           strokeMiterlimit="10"
           strokeWidth="3"
           d="M0,2.5c5.7,0,5.7,4,11.3,4c5.7,0,5.7-4,11.3-4c5.7,0,5.7,4,11.3,4c5.7,0,5.7-4,11.3-4c5.7,0,5.7,4,11.3,4
-		c5.7,0,5.7-4,11.3-4c5.7,0,5.7,4,11.3"
+		c5.7,0,5.7-4,11.3-4"
         />
       </svg>
       <ul
@@ -71,4 +71,4 @@ const typeText = (type: "primary" | "secondary" | "tertiary") => {
   }
 };
 
-export default Project;
+export default Card;

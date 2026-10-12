@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ladderdesigns.netlify.app/sitemap.xml

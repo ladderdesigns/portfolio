@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 interface Props {
-  isIndex: boolean;
+  isIndex?: boolean;
 }
 
-const Navbar = ({ isIndex }: Props) => {
+const Navbar = ({ isIndex = false }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -17,7 +17,9 @@ const Navbar = ({ isIndex }: Props) => {
           <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
             <button
               onClick={toggle}
-              aria-label="menu"
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
               className="inline-flex items-center justify-center p-2 text-base transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-orange-800 focus:outline-none focus:bg-orange-800 focus:text-white"
             >
               <svg
@@ -44,78 +46,64 @@ const Navbar = ({ isIndex }: Props) => {
             </button>
           </div>
           <div className="absolute inset-y-0 left-0 flex items-center pr-2 md:static md:inset-auto md:pr-0">
-            <Link href="/">
-              <a>
+            <Link href="/" aria-label="Ladder Designs home">
                 {" "}
                 <img
-                  src={"/landing-logo.svg"}
-                  alt="Ladder Designs logo"
+                  src="/landing-logo.svg"
+                  alt="Ladder Designs"
+                  width={517}
+                  height={43}
                   className="hidden w-64 ml-2 lg:ml-0 sm:block"
                 />
                 <img
-                  src={"/landing-logo-mobile.svg"}
-                  alt="Ladder Designs logo"
+                  src="/landing-logo-mobile.svg"
+                  alt="Ladder Designs"
+                  width={261}
+                  height={93}
                   className="block ml-4 w-28 sm:hidden"
                 />
-              </a>
-            </Link>
+              </Link>
           </div>
           <div className="flex items-center justify-center flex-1 md:items-stretch md:justify-end">
             <div className="hidden md:block md:ml-2">
               <div className="flex">
-                <Link href="/about">
-                  <a className="px-4 py-2 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+                <Link href="/about" className="px-4 py-2 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
                     ABOUT US
-                  </a>
-                </Link>
+                  </Link>
 
-                <Link href="/our-work">
-                  <a className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+                <Link href="/our-work" className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out rounded-full hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
                     {" "}
                     OUR WORK
-                  </a>
-                </Link>
+                  </Link>
 
-                <Link href="/#contact-us">
-                  <a className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:bg-opacity-75">
+                <Link href="/#contact-us" className="px-4 py-2 ml-4 text-sm font-bold leading-5 text-orange-800 transition duration-150 ease-in-out bg-white rounded-full shadow-lg focus:outline-none hover:opacity-75 focus:bg-opacity-75">
                     {" "}
                     CONTACT US
-                  </a>
-                </Link>
+                  </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className={isOpen ? "block" : "hidden"}>
+      <div id="mobile-menu" className={isOpen ? "block" : "hidden"}>
         <div className="px-2 pt-2 pb-3 sm:ml-2">
-          <Link href="/about">
-            <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+          <Link href="/about" className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
               ABOUT US
-            </a>
-          </Link>
+            </Link>
 
-          <Link href="/our-work">
-            <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
+          <Link href="/our-work" className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out rounded-lg hover:text-white hover:bg-orange-800 focus:outline-none focus:text-white focus:bg-orange-800">
               {" "}
               OUR WORK{" "}
-            </a>
-          </Link>
+            </Link>
 
-          <Link href="/#contact-us">
-            <a className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out bg-white rounded-lg hover:opacity-75 focus:outline-none focus:opacity-75">
+          <Link href="/#contact-us" className="block px-4 py-2 mt-1 text-base font-bold text-orange-800 transition duration-150 ease-in-out bg-white rounded-lg hover:opacity-75 focus:outline-none focus:opacity-75">
               {" "}
               CONTACT US
-            </a>
-          </Link>
+            </Link>
         </div>
       </div>
     </nav>
   );
-};
-
-Navbar.defaultProps = {
-  isIndex: false,
 };
 
 export default Navbar;

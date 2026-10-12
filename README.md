@@ -23,18 +23,18 @@ Ladder Designs - Portfolio is the public-facing website for Ladder Designs. It h
 * TypeScript
 * TailwindCSS
 * Netlify
-* Fontawesome 5
+* Font Awesome
 
 ## Deployment
 
-To deploy locally, clone this repository and run the following commands inside the project folder:
+To run locally, clone this repository and run the following commands inside the project folder (Node 22, see `.nvmrc`):
 
-1. `npm install` or `yarn`;
-2. `yarn dev`;
+1. `npm install`
+2. `npm run dev`
 
 To view the project open `http://localhost:3000`.
 
-This website can be reached at [ladderdesigns.co](https://ladderdesigns.co).
+Netlify builds `master` with the settings in `netlify.toml`. This website can be reached at [ladderdesigns.netlify.app](https://ladderdesigns.netlify.app).
 
 ## To-do
 

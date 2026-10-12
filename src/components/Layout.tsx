@@ -10,10 +10,10 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <div className="px-4 pt-4 bg-champagne">
-        <Navbar></Navbar>
+        <Navbar />
       </div>
-      {children}
-      <Footer></Footer>
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };
