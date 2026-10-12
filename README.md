@@ -34,7 +34,7 @@ To deploy locally, clone this repository and run the following commands inside t
 
 To view the project open `http://localhost:3000`.
 
-This website can be reached at [ladderdesigns.co](https://ladderdesigns.co).
+This website can be reached at [ladderdesigns.netlify.app](https://ladderdesigns.netlify.app).
 
 ## To-do
 

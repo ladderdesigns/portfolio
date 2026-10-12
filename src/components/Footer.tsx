@@ -93,7 +93,7 @@ const Footer = () => (
             />
           </a>
           <a
-            href="mailto:contact@ladderdesigns.co"
+            href="mailto:jseanpatel@gmail.com"
             aria-label="Email link"
             className="cursor-pointer"
           >
@@ -108,10 +108,10 @@ const Footer = () => (
           <hr className="self-start w-64 h-0.5 rounded-sm border-champagne bg-champagne md:self-end" />
 
           <p className="font-semibold text-left text-champagne md:text-right text-md">
-            <Link href="https://ladderdesigns.co">
+            <Link href="https://ladderdesigns.netlify.app">
               <a
                 className="cursor-pointer focus:opacity-50 hover:opacity-50"
-                href="https://ladderdesigns.co"
+                href="https://ladderdesigns.netlify.app"
               >
                 Ladder Designs
               </a>
