@@ -33,10 +33,7 @@ export default function About() {
                 Founder
               </p>
             </div>
-            <p
-              className="max-w-lg text-xl text-left text-orange-800 md:ml-8 md:px-4 md:max-w-lg "
-              id="landing-block"
-            >
+            <p className="max-w-lg text-xl text-left text-orange-800 md:ml-8 md:px-4">
               Coding is my life, but learning is my love. That’s why I started
               Ladder Designs, a student-first design firm committed to creating
               the highest quality software and educational resources for schools
